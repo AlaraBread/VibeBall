@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://game/Player.gd" type="Script" id=1]
+[ext_resource path="res://game/CameraRig.gd" type="Script" id=2]
+[ext_resource path="res://assets/Sky.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=3]
+rough = true
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="SphereShape" id=1]
+
+[node name="TestLevel" type="Spatial"]
+
+[node name="Player" type="RigidBody" parent="."]
+mass = 0.25
+physics_material_override = SubResource( 3 )
+can_sleep = false
+script = ExtResource( 1 )
+
+[node name="CSGSphere" type="CSGSphere" parent="Player"]
+rings = 12
+material = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Node" type="Node" parent="Player"]
+
+[node name="CameraRig" type="Spatial" parent="Player/Node"]
+script = ExtResource( 2 )
+
+[node name="SpringArm" type="SpringArm" parent="Player/Node/CameraRig"]
+spring_length = 5.0
+
+[node name="Camera" type="Camera" parent="Player/Node/CameraRig/SpringArm"]
+current = true
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.68515, 0 )
+use_collision = true
+width = 48.0
+depth = 48.0
+
+[node name="Sky" parent="." instance=ExtResource( 3 )]
