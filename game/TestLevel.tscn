@@ -56,3 +56,22 @@ depth = 46.0
 
 [node name="CSGBox9" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 28, 76 )
+use_collision = true
+width = 54.0
+depth = 46.0
+
+[node name="CSGBox10" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.258819, 0.965925, 0, -0.965925, 0.258819, 0, 55, 88 )
+use_collision = true
+width = 54.0
+depth = 46.0
+
+[node name="CSGBox11" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.258819, -0.965925, 0, 0.965925, 0.258819, 0, 55, -88 )
+use_collision = true
+width = 54.0
+depth = 46.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.965926, -7.71341e-09, -0.258819, 0.258819, 2.87868e-08, 0.965926, 0, -1, 2.98023e-08, 0, 9.81304, 0 )
+shadow_enabled = true
