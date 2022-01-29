@@ -39,9 +39,35 @@ spring_length = 5.0
 current = true
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.68515, 0 )
+transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 0, -5.68515, 0 )
 use_collision = true
-width = 48.0
-depth = 48.0
+width = 212.0
+depth = 160.0
 
 [node name="Sky" parent="." instance=ExtResource( 3 )]
+
+[node name="path" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.3, 0, 0, 0, 0.8, -16.7761, -5.99715, -3.97839 )
+
+[node name="str8piece" type="CSGBox" parent="path"]
+transform = Transform( 2.54535, 0, 0, 0, 1, 0, 0, 0, 1, -11.6033, 0, -4.90133 )
+
+[node name="str8piece4" type="CSGBox" parent="path"]
+transform = Transform( -0.016916, -0.00308001, -0.79994, 0.00480863, 0.999947, -0.0273885, 3.18162, -0.000238115, -0.00663966, -4.97815, 0.0971127, -1.9278 )
+
+[node name="str8piece6" type="CSGBox" parent="path"]
+transform = Transform( -2.54525, 0.000142251, -0.00721195, 0.00480863, 0.999947, -0.0273885, 0.0286656, -0.00385327, -0.999907, -2.70251, 0, -3.97407 )
+
+[node name="str8piece5" type="CSGBox" parent="path"]
+transform = Transform( -0.016916, -0.00308001, -0.79994, 0.00480863, 0.999947, -0.0273885, 3.18162, -0.000238115, -0.00663966, -0.871378, 0, -6.16441 )
+
+[node name="str8piece3" type="CSGBox" parent="path"]
+transform = Transform( 2.01487, 0, 0.488846, 0, 1, 0, -1.94419, 0, 0.791586, -3.22447, 0, 13.0468 )
+
+[node name="str8piece2" type="CSGBox" parent="path"]
+transform = Transform( -0.0194579, 0, 0.799977, 0, 1, 0, -3.1816, 0, -0.0076445, -1.81433, 0, 2.09065 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="path"]
+transform = Transform( -0.000489593, -4.83877, 0.001009, 1.04489, -0.0239276, 0.00251058, -0.0283797, 0.00654528, 1.1668, -1.89613, 0.176697, 0.011498 )
+radius = 1.245
+sides = 20
