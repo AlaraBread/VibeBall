@@ -16,19 +16,25 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
 meshes/compress=true
 =======
+=======
+>>>>>>> 84689eb (ball stuff)
 nodes/use_legacy_names=false
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
 meshes/octahedral_compression=true
 meshes/compress=4286
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 84689eb (ball stuff)
 meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
