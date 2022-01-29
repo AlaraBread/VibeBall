@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://game/Player.gd" type="Script" id=1]
 [ext_resource path="res://game/CameraRig.gd" type="Script" id=2]
 [ext_resource path="res://assets/Sky.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/Material_014.material" type="Material" id=4]
+[ext_resource path="res://models/Material_007.material" type="Material" id=5]
+[ext_resource path="res://models/coralreef.gltf" type="PackedScene" id=6]
 
 [sub_resource type="PhysicsMaterial" id=3]
 rough = true
@@ -13,6 +16,9 @@ albedo_color = Color( 1, 0, 0, 1 )
 [sub_resource type="SphereShape" id=1]
 
 [node name="TestLevel" type="Spatial"]
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( -0.016916, -0.00308001, -0.79994, 0.00144259, 0.299984, -0.00821655, 2.2138, -0.000165683, -0.00461994, -3.93483, 2.12909, -5.4872 )
 
 [node name="Player" type="RigidBody" parent="."]
 mass = 0.25
@@ -36,12 +42,159 @@ script = ExtResource( 2 )
 spring_length = 5.0
 
 [node name="Camera" type="Camera" parent="Player/Node/CameraRig/SpringArm"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.669283, -0.391853, -0.124504 )
 current = true
 
 [node name="CSGBox" type="CSGBox" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.68515, 0 )
+transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 4.71904, -6.02407, -0.143871 )
 use_collision = true
-width = 48.0
-depth = 48.0
+width = 183.37
+depth = 160.0
+
+[node name="CSGBox2" type="CSGBox" parent="."]
+transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.0747684, -6.51159, -5.95194, 1.89744 )
+use_collision = true
+width = 57.3832
+depth = 160.0
+material = ExtResource( 5 )
+
+[node name="path" type="CSGBox" parent="CSGBox2"]
+transform = Transform( 34.4584, 0, 0.112098, 0, 5.07178, 0, -0.50293, 0, 32.5828, -79.482, -4.09999, 1.656 )
+
+[node name="str8piece9" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 3.23541, -0.000276923, -0.0157824, 0.00480863, 0.999947, -0.0273885, 0.112596, 0.00467566, 1.21587, -1.76241, 4.76837e-06, -0.245648 )
+
+[node name="str8piece" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.137693, 0, 0.481736, 0, 1, 0, -4.09062, 0, -0.0574462, -8.25642, 0.228393, -9.40139 )
+
+[node name="str8piece12" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -10.4587, 0.0526199, 16.5874 )
+
+[node name="str8piece18" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -7.39876, 0.0526199, 18.8361 )
+
+[node name="str8piece19" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -10.6292, 0.0526199, 27.1796 )
+
+[node name="str8piece20" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -7.18619, 0.0526199, 27.4298 )
+
+[node name="str8piece26" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -6.43045, 0.0526199, -21.6756 )
+
+[node name="str8piece27" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -1.61207, 0.0526247, -13.2653 )
+
+[node name="str8piece28" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.000851746, 0, 0.761072, 0, 1, 0, -1.88689, 0, 0.000343546, -2.73298, 0.0526247, -16.3054 )
+
+[node name="str8piece29" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.000509482, 0, 1.59062, 0, 1, 0, -1.12866, 0, 0.000718009, -1.89003, 0.0526247, -19.1363 )
+
+[node name="str8piece25" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -3.82521, 0.0526199, 27.674 )
+
+[node name="str8piece21" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88193, 0, 0.0455418, 0, 1, 0, 0.136743, 0, 1.04622, -2.8474, 0.0526199, 12.3161 )
+
+[node name="str8piece23" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.111619, 0, -0.671485, 0, 1, 0, 4.3581, 0, 0.017198, -1.44073, 0.0526199, 9.71698 )
+
+[node name="str8piece24" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.0126398, 0, -0.660584, 0, 1, 0, 4.98974, 0, 0.00167336, -2.63116, 0.0526247, 23.1482 )
+
+[node name="str8piece22" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0659879, 0, 1.04657, 0, 1, 0, -1.88574, 0, -0.0366229, -6.51787, 0.0526199, 21.286 )
+
+[node name="str8piece13" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0178346, 0, 0.615401, 0, 1, 0, -5.33275, 0, -0.00205812, -12.6112, 0.0526199, 4.73782 )
+
+[node name="str8piece16" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0178346, 0, 0.615401, 0, 1, 0, -5.33275, 0, -0.00205812, -12.5781, 0.0526199, 14.6592 )
+
+[node name="str8piece17" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0178346, 0, 0.615401, 0, 1, 0, -5.33275, 0, -0.00205812, -12.5505, 0.0526199, 22.8894 )
+
+[node name="str8piece14" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88182, 0, 0.0447202, 0, 1, 0, 0.143753, 0, 1.04639, -11.199, 0.0526199, 0.495908 )
+
+[node name="str8piece15" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 1.88182, 0, 0.0447202, 0, 1, 0, 0.143753, 0, 1.04639, -6.48505, 0.0526199, -12.2567 )
+
+[node name="str8piece10" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.122839, 0, 0.526563, 0, 1, 0, -7.01185, 0, -0.00922475, -4.89835, 4.76837e-06, -14.0705 )
+
+[node name="str8piece11" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.148472, 0, 0.524987, 0, 1, 0, -4.83192, 0, -0.0583307, -9.72798, 4.76837e-06, 4.506 )
+
+[node name="str8piece7" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 2.54535, 0, 4.65661e-10, 0, 1, 0, 0, 0, 1, -6.64348, 0, 8.20894 )
+
+[node name="str8piece8" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0049683, 0, -0.624019, 0, 1, 0, 4.82632, 0, -0.000642373, -4.75518, -4.76837e-06, 8.52112 )
+
+[node name="str8piece6" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -2.54525, 0.000142251, -0.00721195, 0.00480863, 0.999947, -0.0273885, 0.0286656, -0.00385327, -0.999907, -2.70251, 0, -7.77768 )
+
+[node name="str8piece5" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( -0.0107655, -0.00246258, -0.640381, 0.00382779, 0.999946, -0.00157768, 6.6153, -0.000582604, -0.00104122, -0.50366, 0.000990868, -7.5869 )
+
+[node name="str8piece3" type="CSGBox" parent="CSGBox2/path"]
+transform = Transform( 0.00310947, 0, 0.664703, 0, 1, 0, -4.84329, 0, 0.000426751, -4.73754, -0.0179806, 3.31586 )
+
+[node name="path2" type="CSGBox" parent="CSGBox2"]
+transform = Transform( 34.4592, 0, 0, 0, 5.07178, 0, 0, 0, 32.5836, 62.478, -5.11283, -1003.02 )
+visible = false
+
+[node name="str8piece9" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 3.23541, -0.000276923, -0.0157824, 0.00480863, 0.999947, -0.0273885, 0.112596, 0.00467566, 1.21587, -1.76241, 4.76837e-06, -0.245648 )
+
+[node name="str8piece" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 1.60113, 0, 0.304147, 0, 1, 0, -2.15853, 0, 0.815784, -5.82857, -0.0733337, -6.89064 )
+
+[node name="str8piece12" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 1.60113, 0, 0.304147, 0, 1, 0, -2.15853, 0, 0.815784, -3.21125, 0.0526199, 11.018 )
+
+[node name="str8piece13" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 1.88182, 0, 0.0447202, 0, 1, 0, 0.143753, 0, 1.04639, -10.9349, 0.0526199, 46.5377 )
+
+[node name="str8piece10" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -0.0847469, 0, 0.52559, 0, 1, 0, -4.83747, 0, -0.0332948, -6.60883, 4.76837e-06, -0.855584 )
+
+[node name="str8piece11" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -0.148472, 0, 0.524987, 0, 1, 0, -4.83192, 0, -0.0583307, -9.72798, 4.76837e-06, 4.506 )
+
+[node name="str8piece7" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 2.54535, 0, 0, 0, 1, 0, 0, 0, 1, -7.19765, 0, 8.03606 )
+
+[node name="str8piece8" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 0.22609, 0, -0.523803, 0, 1, 0, 4.82103, 0, 0.0888248, -4.75898, -4.76837e-06, 12.2149 )
+
+[node name="str8piece4" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -0.016916, -0.00308001, -0.79994, 0.00480863, 0.999947, -0.0273885, 2.76725, -0.000207103, -0.00577492, -0.653756, -0.0233898, -1.9278 )
+
+[node name="str8piece6" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -2.54525, 0.000142251, -0.00721195, 0.00480863, 0.999947, -0.0273885, 0.0286656, -0.00385327, -0.999907, -2.70251, 0, -7.77768 )
+
+[node name="str8piece5" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -0.0135246, -0.00246251, -0.639563, 0.00480863, 0.999947, -0.0273885, 6.15333, -0.00046052, -0.0128413, -0.530005, 0, -9.30114 )
+
+[node name="str8piece3" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( 2.01487, 0, 0.488846, 0, 1, 0, -1.94419, 0, 0.791586, -3.36308, 0, 6.28963 )
+
+[node name="str8piece2" type="CSGBox" parent="CSGBox2/path2"]
+transform = Transform( -0.0194579, 0, 0.799977, 0, 1, 0, -3.1816, 0, -0.0076445, -1.69078, -0.0693512, 1.93569 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="CSGBox2/path2"]
+transform = Transform( -0.000489593, -4.83877, 0.001009, 1.04489, -0.0239276, 0.00251058, -0.0283797, 0.00654528, 1.1668, -1.89613, 0.176699, -17.8792 )
+radius = 1.245
+sides = 20
+
+[node name="str8piece2" type="CSGBox" parent="."]
+transform = Transform( -1.4423, 0, 82.9211, 0, 0.781054, 0, -70.6674, 0, -1.6924, -95.858, -11.0175, 13.06 )
+material = ExtResource( 4 )
 
 [node name="Sky" parent="." instance=ExtResource( 3 )]
+
+[node name="coralreef" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -3.82755, -1 )

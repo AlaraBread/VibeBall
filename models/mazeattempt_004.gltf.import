@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/ringogltf.gltf-8fcba52a7c0b5b85bc3609c8377e3de3.scn"
+path="res://.import/mazeattempt_004.gltf-089c3ad854c74dd4808aaf858d4c5963.scn"
 
 [deps]
 
-source_file="res://models/ringogltf.gltf"
-dest_files=[ "res://.import/ringogltf.gltf-8fcba52a7c0b5b85bc3609c8377e3de3.scn" ]
+source_file="res://models/mazeattempt_004.gltf"
+dest_files=[ "res://.import/mazeattempt_004.gltf-089c3ad854c74dd4808aaf858d4c5963.scn" ]
 
 [params]
 
@@ -16,22 +16,15 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-<<<<<<< Updated upstream
-materials/location=1
-materials/storage=1
-materials/keep_on_reimport=true
-meshes/compress=true
-=======
 nodes/use_legacy_names=false
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
 meshes/octahedral_compression=true
 meshes/compress=4286
->>>>>>> Stashed changes
 meshes/ensure_tangents=true
 meshes/storage=0
-meshes/light_baking=0
+meshes/light_baking=1
 meshes/lightmap_texel_size=0.1
 skins/use_named_skins=true
 external_files/store_in_subdir=false
