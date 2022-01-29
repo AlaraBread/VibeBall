@@ -1,6 +1,6 @@
 extends RigidBody
 
-export(float) var rotate_force = 0.5
+export(float) var rotate_force = 10.0
 
 func _integrate_forces(state):
 	var input:Vector3 = Vector3()
