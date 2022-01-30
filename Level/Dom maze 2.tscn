@@ -899,6 +899,7 @@ transform = Transform( -0.112885, 0, 4.80046, 0, 0.780465, 0, -18.2707, 0, -0.02
 material_override = ExtResource( 6 )
 
 [node name="MazeP3" type="CSGBox" parent="maze"]
+visible = false
 width = 0.001
 height = 0.001
 depth = 0.001
@@ -1097,6 +1098,7 @@ material_override = ExtResource( 6 )
 width = 2.68134
 
 [node name="MazeP4" type="CSGBox" parent="maze"]
+visible = false
 width = 0.001
 height = 0.001
 depth = 0.001
