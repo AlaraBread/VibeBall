@@ -14,7 +14,7 @@ export(String) var save_file:String = "save"
 # may write a lot depending on application, use with caution.
 # to avoid many disk writes,
 # prefer manually calling save_to_file() only when needed.
-export(bool) var save_on_set:bool = true
+export(bool) var save_on_set:bool = false
 # automatically read data from file on startup.
 export(bool) var load_on_ready:bool = true
 
@@ -33,7 +33,7 @@ func get(key):
 		return null
 # defualt vaules
 # in the format [name, value]
-var defaults = [["fov", 70], ["sensitivity", 0.1], ["coins", 0], ["coin_ids", []]]
+var defaults = [["fov", 70], ["sensitivity", 0.1], ["coins", 0], ["coin_ids", []], ["time", 0]]
 func _ready():
 	if(load_on_ready):
 		load_from_file()

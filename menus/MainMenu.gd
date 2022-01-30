@@ -20,3 +20,4 @@ func _on_Options_pressed():
 func _on_Reset_pressed():
 	Serializer.set("coins", 0)
 	Serializer.set("coin_ids", [])
+	Serializer.set("time", 0)
