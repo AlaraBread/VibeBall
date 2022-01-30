@@ -1499,6 +1499,7 @@ transform = Transform( 0.0234725, 0, 0.999725, 0, 1, 0, -0.999725, 0, 0.0234725,
 unique_id = 6
 
 [node name="last coin" type="Spatial" parent="coins"]
+visible = false
 script = SubResource( 17 )
 coin_id = 9
 
