@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/genesis.mp3-6979d80fc1f7dfbdc5b404f8c1a28de4.mp3str"
+
+[deps]
+
+source_file="res://assets/music/genesis.mp3"
+dest_files=[ "res://.import/genesis.mp3-6979d80fc1f7dfbdc5b404f8c1a28de4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
