@@ -12,7 +12,11 @@ func _process(delta):
 		$VideoPlayer.play()
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://game/TestLevel.tscn")
+	get_tree().change_scene("res://Level/Dom maze.tscn")
 
 func _on_Options_pressed():
 	get_tree().change_scene("res://menus/Options.tscn")
+
+func _on_Reset_pressed():
+	Serializer.set("coins", 0)
+	Serializer.set("coin_ids", [])

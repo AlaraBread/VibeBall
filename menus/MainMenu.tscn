@@ -43,5 +43,18 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
+[node name="Reset" type="Button" parent="."]
+anchor_left = 0.0205075
+anchor_top = 0.031667
+anchor_right = 0.496
+anchor_bottom = 0.195
+margin_right = 0.0956726
+margin_bottom = 0.000167847
+text = "Reset Progress"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
