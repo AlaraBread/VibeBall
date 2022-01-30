@@ -1,31 +1,50 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://edittedcoralreef.tscn" type="PackedScene" id=1]
-[ext_resource path="res://models/coolrenderdome.gltf" type="PackedScene" id=2]
 [ext_resource path="res://models/ringogltf.gltf" type="PackedScene" id=3]
-[ext_resource path="res://cellshading.tres" type="Material" id=4]
+[ext_resource path="res://assets/SimpleSky.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/Player.tscn" type="PackedScene" id=5]
 
 [node name="Spatial" type="Spatial"]
-
-[node name="Spatial" type="Spatial" parent="."]
-
-[node name="Spatial2" type="Spatial" parent="."]
-
-[node name="coolrenderdome" parent="Spatial2" instance=ExtResource( 2 )]
-transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.0530585, -0.00504041, -0.183943 )
-
-[node name="CSGSphere" type="CSGSphere" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
-material = ExtResource( 4 )
-
-[node name="MeshInstance" type="MeshInstance" parent="CSGSphere"]
-transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0 )
-material_override = ExtResource( 4 )
 
 [node name="Spatial3" type="Spatial" parent="."]
 
 [node name="ringogltf" parent="Spatial3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39468, 8.12901, 1.04131 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39468, 62.5481, 1.04131 )
 
-[node name="coralreef" parent="." instance=ExtResource( 1 )]
+[node name="ringogltf2" parent="Spatial3" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111.481, 62.5481, 1.04131 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+
+[node name="Terrain" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488148, 46.0947, 0.0482941 )
+
+[node name="coralreef" parent="Terrain" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Terrain2" type="Spatial" parent="."]
+transform = Transform( -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 0, 0, 2, -206.925, -9.5422, -0.193787 )
+
+[node name="coralreef" parent="Terrain2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Terrain2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Terrain2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Terrain2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="SimpleSky" parent="." instance=ExtResource( 4 )]
