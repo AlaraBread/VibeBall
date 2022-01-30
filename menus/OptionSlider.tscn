@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://menus/OptionSlider.gd" type="Script" id=1]
+
+[node name="OptionSlider" type="HSlider"]
+anchor_right = 1.0
+anchor_bottom = 0.1
+min_value = 50.0
+max_value = 120.0
+value = 80.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+align = 1
+valign = 1
+
+[connection signal="value_changed" from="." to="." method="_on_OptionSlider_value_changed"]

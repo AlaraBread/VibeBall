@@ -18,11 +18,13 @@ export(bool) var save_on_set:bool = true
 # automatically read data from file on startup.
 export(bool) var load_on_ready:bool = true
 
+signal value_changed(key, value)
 var data = {}
 func set(key, value):
 	data[key] = value
 	if(save_on_set):
 		save_to_file()
+	emit_signal("value_changed", key, value)
 
 func get(key):
 	if(data.has(key)):
@@ -31,7 +33,7 @@ func get(key):
 		return null
 # defualt vaules
 # in the format [name, value]
-var defaults = [["fullscreen", false]]
+var defaults = [["fov", 70], ["sensitivity", 0.1]]
 func _ready():
 	if(load_on_ready):
 		load_from_file()
