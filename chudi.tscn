@@ -16,6 +16,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39468, 62.5481, 1.04131 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111.481, 62.5481, 1.04131 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56.1168, 0 )
 
 [node name="Terrain" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488148, 46.0947, 0.0482941 )
