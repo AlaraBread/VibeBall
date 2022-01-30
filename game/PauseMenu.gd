@@ -14,3 +14,7 @@ func _process(delta):
 
 func _on_Unpause_pressed():
 	set_paused(false)
+
+func _on_MainMenu_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://menus/MainMenu.tscn")

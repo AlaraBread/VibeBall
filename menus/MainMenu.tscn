@@ -54,6 +54,7 @@ text = "Reset Progress"
 __meta__ = {
 "_edit_use_anchors_": true
 }
+
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_Reset_pressed"]
