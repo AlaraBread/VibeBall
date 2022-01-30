@@ -1,6 +1,7 @@
 extends Area
 
 export(int) var unique_id = 0
+export(String) var scene_switch_to = ""
 
 func _ready():
 	var coin_ids = Serializer.get("coin_ids")
@@ -13,6 +14,8 @@ func _on_Collectible_body_entered(body):
 		var coin_ids = Serializer.get("coin_ids")
 		coin_ids.append(unique_id)
 		Serializer.set("coin_ids", coin_ids)
+		if(scene_switch_to != ""):
+			get_tree().change_scene(scene_switch_to)
 		queue_free()
 
 func _process(delta):
