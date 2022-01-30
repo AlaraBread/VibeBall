@@ -11,6 +11,7 @@
 [node name="TestLevel" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0174351, 0.0345058, 0.010376 )
 script = ExtResource( 9 )
+next_level = "res://Level/Dom Maze.tscn"
 
 [node name="floor of death" type="CSGBox" parent="."]
 transform = Transform( 365.321, 0, 0, 0, 3.5237, 0, 0, 0, 270.085, -267.008, -18.7413, 97.9976 )
