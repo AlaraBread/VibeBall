@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/SimpleSky.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/Collectible.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/Material_007.material" type="Material" id=4]
 [ext_resource path="res://models/Material_014.material" type="Material" id=5]
 [ext_resource path="res://assets/Material_007.material" type="Material" id=6]
@@ -329,8 +330,9 @@ material_override = ExtResource( 6 )
 use_collision = true
 width = 2.68134
 
-[node name="MazeP2" type="Spatial" parent="maze"]
+[node name="MazeP2" type="CSGBox" parent="maze"]
 transform = Transform( -1.74846e-08, 0, 0.4, 0, 3.33333, 0, -1, 0, -4.37112e-08, 2.19488, -7.09697, -3.93483 )
+visible = false
 
 [node name="PathPiece001" type="CSGBox" parent="maze/MazeP2"]
 transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -100.552, -5.97091, 49.3435 )
@@ -598,7 +600,8 @@ material_override = ExtResource( 6 )
 transform = Transform( -0.0382927, 0, 4.98294, 0, 0.780354, 0, -13.3779, 0, -0.0142631, -57.5104, -5.97091, 148.286 )
 material_override = ExtResource( 6 )
 
-[node name="MazeP3" type="Spatial" parent="maze"]
+[node name="MazeP3" type="CSGBox" parent="maze"]
+visible = false
 
 [node name="PathPiece001" type="CSGBox" parent="maze/MazeP3"]
 transform = Transform( -7.12973e-07, 0, 1.68202, 0, 2.60349, 0, -16.3109, 0, -7.35234e-08, 25.383, -27, 230.623 )
@@ -671,11 +674,11 @@ transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.003
 material_override = ExtResource( 6 )
 
 [node name="PathPiece017" type="CSGBox" parent="maze/MazeP3"]
-transform = Transform( 2.08442, 0, 0.108179, 0, 2.60119, 0, -0.0491562, 0, 5.70388, 10.7468, -27, 309.01 )
+transform = Transform( 6.15437, 0, 0.1345, 0, 2.60119, 0, -0.145136, 0, 5.70332, 13.5585, -27, 309.658 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece018" type="CSGBox" parent="maze/MazeP3"]
-transform = Transform( 1.24704, 0, 0.0104893, 0, 2.60119, 0, -0.00685634, 0, 11.9241, 13.8927, -27, 315.244 )
+transform = Transform( 1.16706, -0.0054197, 1.67863, 0.192609, 2.60074, 0.00162007, -1.09702, 0.00506046, 11.1613, 21.289, -27, 315.009 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece019" type="CSGBox" parent="maze/MazeP3"]
@@ -791,7 +794,8 @@ transform = Transform( -13.8928, 0, -0.0798785, 0, 2.60465, 0, 0.408647, 0, -3.2
 material_override = ExtResource( 6 )
 width = 2.68134
 
-[node name="MazeP4" type="Spatial" parent="maze"]
+[node name="MazeP4" type="CSGBox" parent="maze"]
+visible = false
 
 [node name="PathPiece001" type="CSGBox" parent="maze/MazeP4"]
 transform = Transform( 13.8935, 0, 0.0718038, 0, 2.60464, 0, -0.191016, 0, 3.22226, 51.6237, -27, 216.541 )
@@ -855,7 +859,7 @@ transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200
 material_override = ExtResource( 6 )
 
 [node name="PathPiece016" type="CSGBox" parent="maze/MazeP4"]
-transform = Transform( -4.99991, 0, -0.00626574, 0, 2.604, 0, 0.0783224, 0, -2.49995, 38.4616, -27, 399.777 )
+transform = Transform( -4.81409, 0, -0.00603308, 0, 2.604, 0, 0.445118, 0, -14.2077, 44.7998, -27, 413.514 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece017" type="CSGBox" parent="maze/MazeP4"]
@@ -1126,32 +1130,37 @@ material_override = ExtResource( 6 )
 transform = Transform( 6.95958, 0, 0.00268979, 0, 2.6035, 0, -0.0382641, 0, 3.05768, 28.061, -27, 326.862 )
 material_override = ExtResource( 6 )
 
-[node name="Spawn platform" type="CSGBox" parent="."]
-transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 4.71904, -6.02407, -0.143871 )
-use_collision = true
-width = 183.37
-depth = 160.0
+[node name="CoinPlatforms" type="Spatial" parent="."]
 
-[node name="Coin platform 1" type="CSGBox" parent="."]
+[node name="Coin platform 1" type="CSGBox" parent="CoinPlatforms"]
 transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, -91.0225, -5.44067, -139.657 )
 use_collision = true
 width = 183.37
 depth = 160.0
 
-[node name="Coin platform 2" type="CSGBox" parent="."]
+[node name="Coin platform 2" type="CSGBox" parent="CoinPlatforms"]
 transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, -20.3588, -5.37047, 165.505 )
+visible = false
 use_collision = true
 width = 183.37
 depth = 160.0
 
-[node name="Coin platform 3" type="CSGBox" parent="."]
-transform = Transform( 0.496334, 0, 0, 0, 0.154, 0, 0, 0, 0.368281, -281.806, -5.37046, -132.558 )
+[node name="Coin platform 3" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.138228, 0, 0, 0, 0.154, 0, 0, 0, 0.146154, -254.346, -5.37046, -112.555 )
+visible = false
 use_collision = true
 width = 183.37
 depth = 160.0
 
-[node name="Coin platform 4" type="CSGBox" parent="."]
-transform = Transform( 0.496334, 0, 0, 0, 0.154, 0, 0, 0, 0.368281, -293.839, -5.37046, 342.716 )
+[node name="Coin platform 4" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.374613, 0, 0, 0, 0.154, 0, 0, 0, 0.174837, -296.849, -5.37046, 325.697 )
+visible = false
+use_collision = true
+width = 183.37
+depth = 160.0
+
+[node name="Spawn platform" type="CSGBox" parent="."]
+transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 4.71904, -6.02407, -0.143871 )
 use_collision = true
 width = 183.37
 depth = 160.0
@@ -1161,5 +1170,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4928, 0, 0 )
 
 [node name="DieBox" parent="." instance=ExtResource( 8 )]
 transform = Transform( -1719.26, 7.51512e-07, 0, 1.74846e-05, 1, 0, 0, 0, 1745.99, -260.105, -21.341, 58.9985 )
+
+[node name="coins" type="Spatial" parent="."]
+
+[node name="Collectible" parent="coins" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.207, -3.93871, -140.4 )
+
+[node name="Collectible2" parent="coins" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4539, -3.93873, 165.351 )
+visible = false
+unique_id = 1
+
+[node name="Collectible3" parent="coins" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -253.819, -3.60299, -113.201 )
+visible = false
+unique_id = 2
+
+[node name="Collectible4" parent="coins" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -325.396, -3.60299, 311.187 )
+visible = false
+unique_id = 3
+
+[node name="Collectible5" parent="coins" instance=ExtResource( 2 )]
+transform = Transform( 0.0234725, 0, 0.999725, 0, 1, 0, -0.999725, 0, 0.0234725, -423.791, -3.60299, 105.691 )
+visible = false
+unique_id = 4
 
 [connection signal="ready" from="." to="player" method="_on_TestLevel_ready"]
