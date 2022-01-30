@@ -33,7 +33,7 @@ func get(key):
 		return null
 # defualt vaules
 # in the format [name, value]
-var defaults = [["fov", 70], ["sensitivity", 0.1]]
+var defaults = [["fov", 70], ["sensitivity", 0.1], ["coins", 0], ["coin_ids", []]]
 func _ready():
 	if(load_on_ready):
 		load_from_file()

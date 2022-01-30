@@ -359,7 +359,7 @@ gradient = SubResource( 2 )
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 5 )
 shader_param/WIND = Vector3( 0.1, 0, 0 )
-shader_param/SUN_POS = Vector3( 0, -0.904517, 0.426437 )
+shader_param/SUN_POS = Vector3( 0, -0.338121, 0.941103 )
 shader_param/SIZE = 2.0069
 shader_param/SOFTNESS = 1.0
 shader_param/COVERAGE = 0.55161
