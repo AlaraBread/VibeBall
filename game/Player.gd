@@ -25,3 +25,10 @@ func _integrate_forces(state):
 
 func _process(delta):
 	$Node/CameraRig.translation = global_transform.origin
+
+func _ready():
+	var color = Color(.5, 0, 0)
+	color.h = rand_range(0, 1)
+	color.s = 1
+	color.v = 0.5
+	$MeshInstance.material_override.albedo_color = color
