@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://assets/SimpleSky.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game/Collectible.tscn" type="PackedScene" id=2]
@@ -50,6 +50,28 @@ func _ready():
 #func _process(delta):
 #	pass
 "
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends \"res://game/MovingPlatform.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="BoxShape" id=14]
+margin = 0.001
 
 [sub_resource type="GDScript" id=10]
 script/source = "extends \"res://game/CoinGroup.gd\"
@@ -552,7 +574,25 @@ width = 2.68134
 [node name="MazeP2" type="CSGBox" parent="maze"]
 transform = Transform( -1.74846e-08, 0, 0.4, 0, 3.33333, 0, -1, 0, -4.37112e-08, 2.26836, -7.2154, -3.9489 )
 visible = false
+width = 0.001
+height = 0.001
+depth = 0.001
 script = SubResource( 1 )
+
+[node name="MovingBody" type="StaticBody" parent="maze/MazeP2"]
+transform = Transform( 46.276, 0, -0.081914, 0, 0.609217, 0, 0.188198, 0, 20.1427, -605.446, -11.8404, 1290.39 )
+script = SubResource( 13 )
+direction = Vector3( 0, 0, 1 )
+distance = 80.0
+speed = 7.0
+
+[node name="CollisionShape" type="CollisionShape" parent="maze/MazeP2/MovingBody"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 2.84217e-14, 0, 1, 0.801502, 1.98827, -8.40434 )
+shape = SubResource( 14 )
+
+[node name="PathPiece020" type="CSGBox" parent="maze/MazeP2/MovingBody/CollisionShape"]
+transform = Transform( -0.000353005, 0, 0.999998, 0, 20, 0, -0.199417, 0, -0.00177018, 10.2982, 7.64626, -50.2034 )
+material_override = ExtResource( 6 )
 
 [node name="PathPiece001" type="CSGBox" parent="maze/MazeP2"]
 transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -100.552, -5.97091, 49.3435 )
@@ -624,10 +664,6 @@ material_override = ExtResource( 6 )
 
 [node name="PathPiece019" type="CSGBox" parent="maze/MazeP2"]
 transform = Transform( 0.0529159, 0, 3.17917, 0, 0.781047, 0, -13.0121, 0, 0.0129287, -195.986, -5.97091, 67.2873 )
-material_override = ExtResource( 6 )
-
-[node name="PathPiece020" type="CSGBox" parent="maze/MazeP2"]
-transform = Transform( 0.0529159, 0, 3.17917, 0, 0.781047, 0, -13.0121, 0, 0.0129287, -196.08, -5.97091, 90.5678 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece021" type="CSGBox" parent="maze/MazeP2"]
@@ -803,6 +839,9 @@ material_override = ExtResource( 6 )
 
 [node name="MazeP3" type="CSGBox" parent="maze"]
 visible = false
+width = 0.001
+height = 0.001
+depth = 0.001
 script = SubResource( 10 )
 coin_id = 1
 
@@ -999,6 +1038,9 @@ width = 2.68134
 
 [node name="MazeP4" type="CSGBox" parent="maze"]
 visible = false
+width = 0.001
+height = 0.001
+depth = 0.001
 script = SubResource( 2 )
 coin_id = 2
 
@@ -1061,10 +1103,6 @@ material_override = ExtResource( 6 )
 
 [node name="PathPiece015" type="CSGBox" parent="maze/MazeP4"]
 transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 35.3539, -27, 364.48 )
-material_override = ExtResource( 6 )
-
-[node name="PathPiece016" type="CSGBox" parent="maze/MazeP4"]
-transform = Transform( -4.81409, 0, -0.00603308, 0, 2.604, 0, 0.445118, 0, -14.2077, 44.7998, -27, 413.514 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece017" type="CSGBox" parent="maze/MazeP4"]
@@ -1357,7 +1395,7 @@ depth = 160.0
 material = ExtResource( 3 )
 
 [node name="Coin platform 2" type="CSGBox" parent="CoinPlatforms"]
-transform = Transform( 0.154, 0, 0, 0, 1, 0, 0, 0, 0.154, -20.3588, -5.37047, 165.505 )
+transform = Transform( 0.154, 0, 0, 0, 1, 0, 0, 0, 0.154, -20.3588, -6.05774, 165.505 )
 visible = false
 use_collision = true
 width = 183.37
@@ -1366,7 +1404,7 @@ material = ExtResource( 3 )
 script = SubResource( 3 )
 
 [node name="Coin platform 3" type="CSGBox" parent="CoinPlatforms"]
-transform = Transform( 0.138, 0, 0, 0, 1, 0, 0, 0, 0.146, -254.346, -5.37046, -112.555 )
+transform = Transform( 0.138, 0, 0, 0, 1, 0, 0, 0, 0.146, -254.346, -6.32075, -113.982 )
 visible = false
 use_collision = true
 width = 183.37
@@ -1376,7 +1414,7 @@ script = SubResource( 4 )
 coin_id = 1
 
 [node name="Coin platform 4" type="CSGBox" parent="CoinPlatforms"]
-transform = Transform( 0.375, 0, 0, 0, 1, 0, 0, 0, 0.175, -296.849, -5.37046, 325.697 )
+transform = Transform( 0.374969, 0, -0.00223571, 0, 1, 0, 0.0047908, 0, 0.174986, -296.855, -6.1913, 327.124 )
 visible = false
 use_collision = true
 width = 183.37
@@ -1384,6 +1422,16 @@ depth = 160.0
 material = ExtResource( 3 )
 script = SubResource( 5 )
 coin_id = 2
+
+[node name="Coin platform 5" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.125809, 0, -0.00223571, 0, 1, 0, 0.0016074, 0, 0.174986, -417, -6.191, 106 )
+visible = false
+use_collision = true
+width = 170.0
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 5 )
+coin_id = 3
 
 [node name="Spawn platform" type="CSGBox" parent="."]
 transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 4.71904, -6.02407, -0.143871 )
@@ -1394,7 +1442,7 @@ depth = 160.0
 material = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -86.114, 0, -134.748 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12435, 0, 0.780776 )
 mass = 0.69
 
 [node name="DieBox" parent="." instance=ExtResource( 8 )]
