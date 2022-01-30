@@ -3,7 +3,7 @@
 [ext_resource path="res://game/DieBox.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=1]
-extents = Vector3( 10, 1, 10 )
+extents = Vector3( 330.543, 1, 359.04 )
 
 [node name="DieBox" type="Area"]
 script = ExtResource( 1 )
