@@ -1198,7 +1198,7 @@ transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.
 material_override = ExtResource( 6 )
 
 [node name="PathPiece025" type="CSGBox" parent="maze/MazeP4"]
-transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 40.0313, -27.2606, 350.055 )
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 40.0314, -26.2871, 350.055 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece026" type="CSGBox" parent="maze/MazeP4"]
