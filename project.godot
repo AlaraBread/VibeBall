@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="VibeBall"
-run/main_scene="res://menus/MainMenu.tscn"
+run/main_scene="res://Level/Dom maze.tscn"
 config/icon="res://icon.png"
 
 [autoload]
