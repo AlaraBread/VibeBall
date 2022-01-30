@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game/CameraRig.gd" type="Script" id=1]
 [ext_resource path="res://game/Player.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://models/Material_014.material" type="Material" id=5]
 [ext_resource path="res://assets/Material_007.material" type="Material" id=6]
 [ext_resource path="res://game/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game/DieBox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/Level.gd" type="Script" id=9]
 
 [sub_resource type="PhysicsMaterial" id=3]
 rough = true
@@ -18,6 +20,10 @@ albedo_color = Color( 1, 0, 0, 1 )
 
 [node name="TestLevel" type="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0174351, 0.0345058, 0.010376 )
+script = ExtResource( 9 )
+
+[node name="DieBox" parent="." instance=ExtResource( 8 )]
+transform = Transform( 450.809, 0, 0, 0, 1, 0, 0, 0, 450.809, 0, -14.1704, 0 )
 
 [node name="Spatial" type="CSGBox" parent="."]
 transform = Transform( -1.09278e-07, 0, -1, 0, 0.3, 0, 2.5, 0, -4.37114e-08, -3.93483, 2.12909, -5.4872 )
@@ -27,7 +33,7 @@ width = 0.001
 height = 0.001
 
 [node name="MazeStart" type="CSGBox" parent="Spatial"]
-transform = Transform( -0.000248344, 0, 0.0299999, 0, 0.623, 0, -0.119, 0, -6.26076e-05, 3.25196, -27, 4.66171 )
+transform = Transform( -0.000214653, -0.000653865, 0.0299999, -0.0598469, 0.538482, 1.26225e-12, -0.102856, -0.313315, -6.26075e-05, 3.25196, -27, 4.66171 )
 material_override = ExtResource( 6 )
 snap = 0.0001
 use_collision = true
@@ -122,7 +128,7 @@ transform = Transform( 5.90175, 0, 0, 0, 2.60351, 0, 0, 0, 4.61745, 19.8334, -27
 material_override = ExtResource( 6 )
 
 [node name="str8piece17" type="CSGBox" parent="Spatial"]
-transform = Transform( 5.90175, 0, 0, 0, 2.60351, 0, 0, 0, 4.61745, 28.933, -27, 112 )
+transform = Transform( 5.90175, 0, 0, 0, 2.60351, 0, -3.41061e-13, 0, 4.61745, 28.933, -26.08, 112 )
 material_override = ExtResource( 6 )
 
 [node name="str8piece14" type="CSGBox" parent="Spatial"]
@@ -340,6 +346,732 @@ material_override = ExtResource( 6 )
 transform = Transform( 5.35117, 0, 0, 0, 2.60118, 0, 0, 0, 4.98297, -30.6473, -27, 185.603 )
 material_override = ExtResource( 6 )
 
+[node name="str8piece74" type="CSGBox" parent="Spatial"]
+transform = Transform( 13.8935, 0, 0.0718038, 0, 2.60464, 0, -0.191016, 0, 3.22226, 51.6237, -27, 216.541 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="str8piece75" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20482, 0, 0.00517143, 0, 2.60349, 0, -0.0529153, 0, -3.17917, 30.0975, -27, 160.385 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece76" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20482, 0, 0.00517143, 0, 2.6035, 0, -0.0529153, 0, -3.17917, 38.2828, -27, 160.469 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece77" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20482, 0, 0.00517143, 0, 2.60349, 0, -0.0529153, 0, -3.17917, 29.1098, -27, 192.051 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece78" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20482, 0, 0.00517143, 0, 2.60349, 0, -0.0529153, 0, -3.17917, 38.422, -27, 192.145 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece79" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20482, 0, 0.00517143, 0, 2.60349, 0, -0.0529153, 0, -3.17917, 47.5123, -27, 192.238 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece80" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0848489, 0, 2.85201, 0, 2.6035, 0, -5.7873, 0, -0.0174643, 40.5453, -27, 168.553 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece82" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0241083, 0, -1.43937, 0, 2.60349, 0, 14.8212, 0, -0.0146334, 32.6781, -27, 122.996 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece83" type="CSGBox" parent="Spatial"]
+transform = Transform( -6.95953, 0, 0.00497377, 0, 2.60349, 0, -0.0707548, 0, -3.05766, 40.8449, -27, 135.381 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece84" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0240021, 0, -1.7064, 0, 2.6035, 0, 14.7559, 0, -0.0173482, 46.4367, -27, 127.017 )
+material_override = ExtResource( 6 )
+
+[node name="MazeEnd2" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.47415e-05, 0, 0.029973, 0, 0.622443, 0, -0.118895, 0, 0.000242167, 75.9637, -27, 118.937 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="str8piece85" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.114553, 0, 1.37413, 0, 2.60134, 0, -24.2556, 0, 0.0182246, 75.852, -27, 146.035 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece86" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.00751042, 0, 4.99996, 0, 2.601, 0, -4.61696, 0, 0.0508328, 65.76, -27, 194.811 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece87" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0229552, 0, 1.27685, 0, 2.60118, 0, -14.1115, 0, 0.0129813, 94.4778, -27, 211 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece88" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 96.9514, -27, 188.042 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece89" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.18, -27, 212.149 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece90" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.444, -27, 186.345 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece91" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0228602, 0, -1.40989, 0, 2.60059, 0, 14.0539, 0, -0.0143337, 52.1943, -27, 181.276 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece92" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 61.4686, -27, 145.066 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece93" type="CSGBox" parent="Spatial"]
+transform = Transform( -2.08451, 0, -0.0938811, 0, 2.60118, 0, 0.0165039, 0, -5.70546, 58.114, -27, 153.503 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece94" type="CSGBox" parent="Spatial"]
+transform = Transform( -1.24703, 0, 0.0193963, 0, 2.60118, 0, -0.0126781, 0, -11.924, 54.9838, -27, 147.22 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece95" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.702, -27, 161.156 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece96" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 89.7329, -27, 154.015 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece97" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.90337, 0, 0.00643159, 0, 2.60118, 0, -0.0498505, 0, -3.95387, 86.8568, -27, 143.504 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece98" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.51227, 0, 0.158288, 0, 2.60118, 0, -0.155253, 0, 4.31393, 101.698, -27, 152.262 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece99" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.00349877, 0, -4.42144, 0, 2.601, 0, 2.15098, 0, -0.0449506, 101.308, -27, 175.783 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece100" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89644, 0, 0.00750423, 0, 2.60118, 0, -0.0599467, 0, -4.61328, 81.3956, -27, 226.791 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece101" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89644, 0, 0.00750423, 0, 2.60118, 0, -0.0599467, 0, -4.61328, 90.0445, -27, 226.879 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece102" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.152357, 0, 1.28936, 0, 2.60118, 0, -14.109, 0, 0.0249333, 76.7039, -27, 216.743 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece103" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.152357, 0, 1.28936, 0, 2.60118, 0, -14.109, 0, 0.0249333, 62.3395, -27, 181.568 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece104" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.81971, 0, 0.00642071, 0, 2.60118, 0, -0.0794998, 0, -3.94718, 60.5905, -27, 169.704 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece105" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.4746, 0, 0.00643764, 0, 2.60118, 0, -0.0556581, 0, -3.95759, 81.1287, -27, 205.671 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece106" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.00878531, 0, 1.10494, 0, 2.60118, 0, -19.0814, 0, 0.00892732, 85.2088, -27, 182.511 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece107" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.33178, 0, 0.0586414, 0, 2.60118, 0, -0.0213108, 0, 4.67814, 85.5471, -27, 168.356 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece108" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.041335, 0, -1.11001, 0, 2.60078, 0, 19.0807, 0, -0.00707461, 67.4916, -27, 153.453 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece109" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.30835, 0, 0.00780879, 0, 2.60155, 0, -0.074301, 0, -4.80051, 67.7377, -27, 136.692 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece110" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.35113, 0, 0.00810551, 0, 2.60118, 0, -0.0544028, 0, -4.98293, 79.7968, -27, 168.288 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece111" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0114101, 0, 4.99991, 0, 2.60101, 0, -4.61691, 0, -0.0772302, 53.5043, -27, 55.3614 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece112" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0348743, 0, 1.27684, 0, 2.60118, 0, -14.1113, 0, -0.0197224, 76.3644, -27, 95.9099 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece113" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 78.7437, -27, 72.8897 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece114" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 88.0704, -27, 96.7591 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece115" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 88.2291, -27, 70.9492 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece116" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 43.0867, -27, 30.8246 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece117" type="CSGBox" parent="Spatial"]
+transform = Transform( -2.08433, 0, -0.117257, 0, 2.60118, 0, 0.0698919, 0, -5.70276, 39.7669, -27, 39.3471 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece118" type="CSGBox" parent="Spatial"]
+transform = Transform( -1.24702, 0, -0.0294689, 0, 2.60118, 0, 0.0192619, 0, -11.9239, 36.611, -27, 33.1447 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece119" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 88.384, -27, 45.7553 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece120" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0867811, 0, 1.27682, 0, 2.60118, 0, -14.1127, 0, -0.00871413, 71.3861, -27, 39.0487 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece121" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.90332, 0, -0.00977155, 0, 2.60118, 0, 0.0757384, 0, -3.95382, 68.4671, -27, 28.6126 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece122" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.51135, 0, 0.175958, 0, 2.60118, 0, -0.296426, 0, 4.30965, 83.3439, -27, 36.99 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece123" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.00531606, 0, -4.42139, 0, 2.601, 0, 2.15096, 0, 0.0682947, 83.0503, -27, 60.519 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece124" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89638, 0, -0.0114012, 0, 2.60118, 0, 0.0910776, 0, -4.61323, 63.3476, -27, 112.035 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece125" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89638, 0, -0.0114012, 0, 2.60118, 0, 0.0910776, 0, -4.61323, 71.9963, -27, 111.902 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece126" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0945307, 0, 1.2894, 0, 2.60118, 0, -14.1121, 0, -0.00809146, 58.6149, -27, 102.107 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece127" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0945307, 0, 1.2894, 0, 2.60119, 0, -14.1121, 0, -0.00809146, 88.4539, -27, 103.584 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece128" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.47454, 0, -0.00978074, 0, 2.60118, 0, 0.0845618, 0, -3.95754, 62.9941, -27, 90.9223 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece129" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0869799, 0, 1.10491, 0, 2.60118, 0, -19.0802, 0, -0.0193731, 66.979, -27, 67.6593 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece130" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.33142, 0, 0.0778092, 0, 2.60118, 0, -0.157869, 0, 4.6764, 67.2594, -27, 53.4967 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece131" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.119525, 0, -1.10998, 0, 2.60078, 0, 19.0786, 0, 0.0213556, 49.1437, -27, 39.0563 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece132" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.30828, 0, -0.0118639, 0, 2.60155, 0, 0.112886, 0, -4.80046, 49.3211, -27, 22.2902 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece133" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.35108, 0, -0.0123148, 0, 2.60118, 0, 0.0826547, 0, -4.98287, 61.509, -27, 53.5756 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece134" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.62098, 0, -0.00911922, 0, 2.60351, 0, 0.0723868, 0, -3.63844, 75.8793, -27, 380.788 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece135" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 47.0704, -27, 365.328 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece136" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 44.6897, -27, 388.369 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece137" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 35.3539, -27, 364.48 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece138" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.99991, 0, -0.00626574, 0, 2.604, 0, 0.0783224, 0, -2.49995, 38.4616, -27, 399.777 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece139" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0352949, 0, -1.18602, 0, 2.60351, 0, 14.0819, 0, 0.0185787, 89.5125, -27, 393.984 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece140" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.12392, 0, -0.00751891, 0, 2.5, 0, 0.0646004, 0, -2.99994, 34.7126, -27, 325.79 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece141" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.03401, 0, 1.83225, 0, 2.60351, 0, -13.5697, 0, -0.0287017, 37.6346, -27, 336.235 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece142" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.00539539, 0, -3.8702, 0, 2.60351, 0, 2.15265, 0, 0.0606262, 45.0408, -27, 400.304 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece143" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 60.0996, -27, 349.741 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece144" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.292843, 0, 1.12331, 0, 2.60081, 0, -30.979, 0, -0.0253989, 71.6765, -27, 351.936 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece145" type="CSGBox" parent="Spatial"]
+transform = Transform( -14.2527, 0, -0.00472078, 0, 2.60349, 0, 0.223266, 0, -1.88352, 80.908, -27, 359.839 )
+material_override = ExtResource( 6 )
+width = 1.13238
+
+[node name="str8piece146" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 49.1307, -27, 349.913 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece147" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 40.0313, -27, 350.055 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece148" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0353989, 0, -1.29058, 0, 2.60351, 0, 14.1234, 0, 0.0202167, 64.8355, -27, 359.122 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece149" type="CSGBox" parent="Spatial"]
+transform = Transform( 13.892, 0, 0.0851172, 0, 2.60464, 0, -0.549885, 0, 3.22023, 71.4539, -27, 324.499 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="str8piece150" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0353989, 0, -1.29058, 0, 2.60351, 0, 14.1234, 0, 0.0202167, 79.0971, -27, 393.957 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece151" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.8266, 0, -0.00990181, 0, 2.60351, 0, 0.122602, 0, -3.95066, 81.1571, -27, 405.784 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece152" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.47944, 0, -0.00992787, 0, 2.60351, 0, 0.0858344, 0, -3.96108, 60.4527, -27, 370.317 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece153" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0877222, 0, -1.1059, 0, 2.60351, 0, 19.0973, 0, 0.0196318, 56.4651, -27, 393.602 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece154" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.33618, 0, -0.078041, 0, 2.60351, 0, 0.159174, 0, -4.68057, 61.176, -27, 407.698 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece155" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.35489, 0, 0.096226, 0, 2.60351, 0, -0.173801, 0, 4.98531, 61.9405, -27, 407.697 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece156" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 49.6967, -27, 268.902 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece157" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.6035, 0, 0.0815316, 0, -3.17914, 57.8818, -27, 268.774 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece158" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 48.8399, -27, 300.591 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece159" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 58.152, -27, 300.445 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece160" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 67.2422, -27, 300.303 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece161" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.108763, 0, 2.85179, 0, 2.6035, 0, -5.7848, 0, -0.0911328, 60.1777, -27, 276.799 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece162" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.2839, -27, 231.379 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece163" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.36, -27, 261.721 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece164" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.4231, -27, 286.893 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece165" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.20838, 0, -0.00796595, 0, 2.60349, 0, 0.0815882, 0, -3.1783, 48.2871, -27, 218.78 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece166" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0371474, 0, -1.43935, 0, 2.60349, 0, 14.821, 0, 0.0225472, 52.1227, -27, 231.449 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece167" type="CSGBox" parent="Spatial"]
+transform = Transform( -6.95945, 0, -0.00766351, 0, 2.60349, 0, 0.109018, 0, -3.05763, 60.3401, -27, 243.621 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece168" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0369837, 0, -1.70638, 0, 2.6035, 0, 14.7557, 0, 0.0267301, 65.8971, -27, 235.114 )
+material_override = ExtResource( 6 )
+
+[node name="MazeEnd3" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.000546116, 0, 0.0299724, 0, 0.622443, 0, -0.118887, 0, -0.000532068, 95.3892, -27, 226.272 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="str8piece169" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0143005, 0, 1.37413, 0, 2.60134, 0, -24.2573, 0, -0.0172711, 95.3895, -27, 253.371 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece170" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0115714, 0, 4.99991, 0, 2.601, 0, -4.61691, 0, -0.0783222, 85.4996, -27, 302.405 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece171" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0353674, 0, 1.27684, 0, 2.60118, 0, -14.1113, 0, -0.0200013, 114.283, -27, 317.852 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece172" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 116.661, -27, 294.831 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece173" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 125.989, -27, 318.698 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece174" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 126.147, -27, 292.888 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece175" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0352242, 0, -1.40987, 0, 2.60059, 0, 14.0537, 0, 0.0220854, 71.8786, -27, 289.221 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece176" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 81.0027, -27, 252.774 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece177" type="CSGBox" parent="Spatial"]
+transform = Transform( -2.08433, 0, -0.117456, 0, 2.60118, 0, 0.0703472, 0, -5.70273, 77.6832, -27, 261.297 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece178" type="CSGBox" parent="Spatial"]
+transform = Transform( -1.24702, 0, -0.0298854, 0, 2.60118, 0, 0.0195343, 0, -11.9239, 74.5272, -27, 255.095 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece179" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 126.301, -27, 267.694 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece180" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 109.303, -27, 260.991 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece181" type="CSGBox" parent="Spatial"]
+transform = Transform( -4.90331, 0, -0.00990968, 0, 2.60118, 0, 0.0768095, 0, -3.95382, 106.383, -27, 250.556 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece182" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.51134, 0, 0.176109, 0, 2.60118, 0, -0.29763, 0, 4.30962, 121.26, -27, 258.93 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece183" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.00539122, 0, -4.42139, 0, 2.601, 0, 2.15096, 0, 0.0692605, 120.968, -27, 282.459 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece184" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89637, 0, -0.0115624, 0, 2.60118, 0, 0.0923654, 0, -4.61323, 101.267, -27, 333.98 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece185" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.292584, 0, -1.12231, 0, 2.59849, 0, 30.9513, 0, 0.0253764, 89.6987, -27, 331.232 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece186" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.89637, 0, -0.0115624, 0, 2.60118, 0, 0.0923654, 0, -4.61323, 109.915, -27, 333.844 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece187" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0147786, 0, -4.61323, 0, 2.60118, 0, 5.89636, 0, 0.0722655, 92.876, -27, 387.547 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece188" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0940378, 0, 1.2894, 0, 2.60118, 0, -14.1121, 0, -0.00837307, 96.5336, -27, 324.053 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece189" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0940378, 0, 1.2894, 0, 2.60118, 0, -14.1121, 0, -0.00837307, 82.0245, -27, 289.251 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece190" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.81961, 0, -0.00989289, 0, 2.60118, 0, 0.122493, 0, -3.94713, 80.2265, -27, 277.432 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece191" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.47454, 0, -0.009919, 0, 2.60118, 0, 0.0857575, 0, -3.95754, 100.912, -27, 312.867 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece192" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0876467, 0, 1.10491, 0, 2.60118, 0, -19.0802, 0, -0.0196143, 104.897, -27, 289.603 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece193" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.33141, 0, 0.0779726, 0, 2.60118, 0, -0.159033, 0, 4.67638, 105.176, -27, 275.44 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece194" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.120191, 0, -1.10998, 0, 2.60078, 0, 19.0786, 0, 0.021598, 87.0601, -27, 261.004 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece195" type="CSGBox" parent="Spatial"]
+transform = Transform( -7.30826, 0, -0.0120317, 0, 2.60155, 0, 0.114483, 0, -4.80046, 87.2369, -27, 244.238 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece196" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.35107, 0, -0.0124888, 0, 2.60118, 0, 0.0838235, 0, -4.98287, 99.426, -27, 275.521 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece197" type="CSGBox" parent="Spatial"]
+transform = Transform( -13.8928, 0, -0.0798785, 0, 2.60465, 0, 0.408647, 0, -3.22107, 17.079, -27, 245.872 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="str8piece198" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 38.7455, -27, 301.689 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece199" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.60351, 0, -0.0286165, 0, 3.17919, 30.5602, -27, 301.734 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece200" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 39.6538, -27, 270.009 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece201" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 30.3416, -27, 270.06 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece202" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 21.2512, -27, 270.11 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece203" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0993521, 0, -2.85192, 0, 2.60351, 0, 5.78586, 0, 0.0621393, 28.2774, -27, 293.686 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece204" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.20848, 0, 0.00279592, 0, 2.6035, 0, -0.0286367, 0, 3.17835, 40.0737, -27, 351.825 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece205" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0130385, 0, 1.43938, 0, 2.6035, 0, -14.8213, 0, -0.0079139, 36.2587, -27, 339.118 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece206" type="CSGBox" parent="Spatial"]
+transform = Transform( 6.95958, 0, 0.00268979, 0, 2.6035, 0, -0.0382641, 0, 3.05768, 28.061, -27, 326.862 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece207" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.012981, 0, 1.70641, 0, 2.60351, 0, -14.756, 0, -0.00938214, 22.4903, -27, 335.312 )
+material_override = ExtResource( 6 )
+
+[node name="MazeEnd4" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.000352725, 0, -0.029973, 0, 0.622443, 0, 0.118891, 0, 0.00022735, -7.0159, -27, 343.855 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="str8piece208" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0537584, 0, -1.37415, 0, 2.60135, 0, 24.257, 0, 0.00330094, -6.97214, -27, 316.755 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece209" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.00406121, 0, -5, 0, 2.60101, 0, 4.61699, 0, 0.02749, 2.99738, -27, 267.823 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece210" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0124129, 0, -1.27686, 0, 2.60119, 0, 14.1116, 0, 0.00702023, -25.7604, -27, 252.084 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece211" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -28.1764, -27, 275.08 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece212" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.465, -27, 251.118 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece213" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.6648, -27, 276.926 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece214" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0123635, 0, 1.4099, 0, 2.6006, 0, -14.054, 0, -0.00775177, 16.5968, -27, 281.145 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece215" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, 7.41344, -27, 317.499 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece216" type="CSGBox" parent="Spatial"]
+transform = Transform( 2.08442, 0, 0.108179, 0, 2.60119, 0, -0.0491562, 0, 5.70388, 10.7468, -27, 309.01 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece217" type="CSGBox" parent="Spatial"]
+transform = Transform( 1.24704, 0, 0.0104893, 0, 2.60119, 0, -0.00685634, 0, 11.9241, 13.8927, -27, 315.244 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece218" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.8598, -27, 302.118 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece219" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -20.8727, -27, 308.994 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece220" type="CSGBox" parent="Spatial"]
+transform = Transform( 4.9034, 0, 0.0034781, 0, 2.60119, 0, -0.0269594, 0, 3.95389, -17.9703, -27, 319.459 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece221" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.51178, 0, -0.169097, 0, 2.60119, 0, 0.241596, 0, -4.31137, -32.8337, -27, 310.934 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece222" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0018923, 0, 4.42146, 0, 2.60101, 0, -2.15099, 0, -0.0243098, -32.5027, -27, 287.408 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece223" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.89648, 0, 0.0040582, 0, 2.60119, 0, -0.0324193, 0, 4.61331, -12.718, -27, 236.088 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece224" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.89648, 0, 0.0040582, 0, 2.60119, 0, -0.0324193, 0, 4.61331, -21.3669, -27, 236.135 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece225" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.116992, 0, -1.2894, 0, 2.60119, 0, 14.1111, 0, -0.00473563, -8.00125, -27, 246.063 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece226" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.116992, 0, -1.2894, 0, 2.60119, 0, 14.1111, 0, -0.00473563, 6.45108, -27, 281.012 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece227" type="CSGBox" parent="Spatial"]
+transform = Transform( 7.81976, 0, 0.00347226, 0, 2.60119, 0, -0.0429934, 0, 3.9472, 8.22977, -27, 292.849 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece228" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.47464, 0, 0.00348141, 0, 2.60119, 0, -0.0300998, 0, 3.95761, -12.3982, -27, 257.204 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece229" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0566092, 0, -1.10494, 0, 2.60119, 0, 19.0809, 0, 0.00838113, -16.4201, -27, 280.427 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece230" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.33163, 0, -0.0703651, 0, 2.60119, 0, 0.10483, 0, -4.67713, -16.723, -27, 294.587 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece231" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0891564, 0, 1.11, 0, 2.60079, 0, -19.0797, 0, -0.0103132, 1.36956, -27, 309.208 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece232" type="CSGBox" parent="Spatial"]
+transform = Transform( 7.3084, 0, 0.00422296, 0, 2.60156, 0, -0.0401824, 0, 4.80054, 1.16541, -27, 325.972 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece233" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.35117, 0, 0.00438337, 0, 2.60119, 0, -0.029421, 0, 4.98296, -10.9726, -27, 294.565 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece234" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.0229812, 0, -4.99963, 0, 2.60101, 0, 4.61664, 0, 0.15555, 15.6024, -27, 407.078 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece235" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.070241, 0, -1.27676, 0, 2.60119, 0, 14.1105, 0, 0.0397231, -7.35884, -27, 366.888 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece236" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -9.68044, -27, 389.945 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece237" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -19.0668, -27, 366.222 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece238" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -19.1608, -27, 392.034 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece239" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0107069, 0, 4.42114, 0, 2.60101, 0, -2.15083, 0, -0.137552, -13.956, -27, 402.383 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece240" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.89604, 0, 0.0229631, 0, 2.60119, 0, -0.18344, 0, 4.61296, 5.61728, -27, 350.559 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece241" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.89604, 0, 0.0229631, 0, 2.60119, 0, -0.18344, 0, 4.61296, -3.03097, -27, 350.828 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece242" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0591598, 0, -1.28935, 0, 2.60119, 0, 14.1133, 0, 0.028289, 10.3747, -27, 360.413 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece243" type="CSGBox" parent="Spatial"]
+transform = Transform( -0.0591598, 0, -1.28935, 0, 2.60119, 0, 14.1133, 0, 0.028289, -19.4674, -27, 359.404 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece244" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.47423, 0, 0.0196994, 0, 2.60119, 0, -0.170316, 0, 3.95731, 6.0236, -27, 371.666 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece245" type="CSGBox" parent="Spatial"]
+transform = Transform( 0.134799, 0, -1.10485, 0, 2.60119, 0, 19.0785, 0, 0.0366805, 2.09711, -27, 394.991 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece246" type="CSGBox" parent="Spatial"]
+transform = Transform( -5.33093, 0, -0.0895282, 0, 2.60119, 0, 0.24138, 0, -4.67509, 1.85225, -27, 409.158 )
+material_override = ExtResource( 6 )
+
+[node name="str8piece247" type="CSGBox" parent="Spatial"]
+transform = Transform( 5.35077, 0, 0.0248031, 0, 2.60119, 0, -0.166475, 0, 4.98258, 7.60228, -27, 408.989 )
+material_override = ExtResource( 6 )
+
 [node name="Player" type="RigidBody" parent="."]
 mass = 0.25
 physics_material_override = SubResource( 3 )
@@ -376,6 +1108,7 @@ depth = 160.0
 
 [node name="floor of death" type="CSGBox" parent="."]
 transform = Transform( -6.50689, 0, 374.096, 0, 3.5237, 0, -263.636, 0, -6.31377, -95.858, -23.7144, 13.06 )
+visible = false
 use_collision = true
 material = ExtResource( 5 )
 
