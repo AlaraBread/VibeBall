@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/aethersphere.mp3-82ee67a865293e4dde393e396ef2871f.mp3str"
+
+[deps]
+
+source_file="res://assets/music/aethersphere.mp3"
+dest_files=[ "res://.import/aethersphere.mp3-82ee67a865293e4dde393e396ef2871f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
