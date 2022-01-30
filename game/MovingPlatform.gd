@@ -26,4 +26,3 @@ func _process(delta):
 			if(translation.distance_squared_to(start_pos) < 0.1):
 				state = 0
 	constant_linear_velocity = direction*speed
-	print(constant_linear_velocity)
