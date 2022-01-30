@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://models/wall1.gltf" type="PackedScene" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+params_cull_mode = 1
+params_grow = true
+params_grow_amount = 0.01
+albedo_color = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+next_pass = SubResource( 1 )
+params_diffuse_mode = 4
+params_specular_mode = 3
+albedo_color = Color( 0.6, 0.180392, 0.592157, 1 )
+metallic_specular = 0.69
+roughness = 0.1
+
+[node name="wall1" instance=ExtResource( 1 )]
+
+[node name="altd003" parent="." index="0"]
+transform = Transform( -5.51779, -99.8477, 4.36448e-06, 0, -4.37114e-06, -100, 99.8477, -5.51779, 2.4119e-07, -13.4016, 4.40548, 4.31083 )
+material_override = SubResource( 2 )
