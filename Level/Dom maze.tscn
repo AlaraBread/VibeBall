@@ -573,7 +573,6 @@ width = 2.68134
 
 [node name="MazeP2" type="CSGBox" parent="maze"]
 transform = Transform( -1.74846e-08, 0, 0.4, 0, 3.33333, 0, -1, 0, -4.37112e-08, 2.26836, -7.2154, -3.9489 )
-visible = false
 width = 0.001
 height = 0.001
 depth = 0.001
@@ -587,11 +586,11 @@ distance = 80.0
 speed = 7.0
 
 [node name="CollisionShape" type="CollisionShape" parent="maze/MazeP2/MovingBody"]
-transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 2.84217e-14, 0, 1, 0.801502, 1.98827, -8.40434 )
+transform = Transform( 0.296185, 0, -3.34694e-10, 0, 1, 0, 3.72529e-09, 0, 0.0318532, 8.30514, 1, -58.2819 )
 shape = SubResource( 14 )
 
 [node name="PathPiece020" type="CSGBox" parent="maze/MazeP2/MovingBody/CollisionShape"]
-transform = Transform( -0.000353005, 0, 0.999998, 0, 20, 0, -0.199417, 0, -0.00177018, 10.2982, 7.64626, -50.2034 )
+transform = Transform( -0.000353005, 0, 4.01046, 0, 20, 0, -0.199417, 0, -0.00709924, 10.2982, 7.64626, -50.2034 )
 material_override = ExtResource( 6 )
 
 [node name="PathPiece001" type="CSGBox" parent="maze/MazeP2"]
@@ -838,7 +837,6 @@ transform = Transform( -0.112885, 0, 4.80046, 0, 0.780465, 0, -18.2707, 0, -0.02
 material_override = ExtResource( 6 )
 
 [node name="MazeP3" type="CSGBox" parent="maze"]
-visible = false
 width = 0.001
 height = 0.001
 depth = 0.001
@@ -1037,7 +1035,6 @@ material_override = ExtResource( 6 )
 width = 2.68134
 
 [node name="MazeP4" type="CSGBox" parent="maze"]
-visible = false
 width = 0.001
 height = 0.001
 depth = 0.001
@@ -1487,5 +1484,6 @@ coin_id = 3
 [node name="Collectible5" parent="coins/Spatial4" instance=ExtResource( 2 )]
 transform = Transform( 0.0234725, 0, 0.999725, 0, 1, 0, -0.999725, 0, 0.0234725, -423.791, -3.60299, 105.691 )
 unique_id = 4
+scene_switch_to = "res://Level/Dom maze 2.tscn"
 
 [connection signal="ready" from="." to="player" method="_on_TestLevel_ready"]
