@@ -1,0 +1,1549 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://assets/SimpleSky.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/Collectible.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/maze.material" type="Material" id=3]
+[ext_resource path="res://models/Material_007.material" type="Material" id=4]
+[ext_resource path="res://models/Material_014.material" type="Material" id=5]
+[ext_resource path="res://assets/Material_007.material" type="Material" id=6]
+[ext_resource path="res://game/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game/DieBox.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/Level.gd" type="Script" id=9]
+
+[sub_resource type="GDScript" id=15]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=11]
+script/source = "extends \"res://game/MovingPlatform.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="BoxShape" id=12]
+extents = Vector3( 0.789, 1.018, 1.301 )
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=13]
+script/source = "extends \"res://game/MovingPlatform.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="BoxShape" id=14]
+margin = 0.001
+
+[sub_resource type="GDScript" id=10]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=16]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=18]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=6]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=7]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=8]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="GDScript" id=17]
+script/source = "extends \"res://game/CoinGroup.gd\"
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[node name="TestLevel" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0174351, 0.0345058, 0.010376 )
+script = ExtResource( 9 )
+next_level = "res://Level/Dom maze 2.tscn"
+
+[node name="SimpleSky" parent="." instance=ExtResource( 1 )]
+
+[node name="floor of death" type="CSGBox" parent="."]
+transform = Transform( 365.321, 0, 0, 0, 3.5237, 0, 0, 0, 270.085, -267.008, -18.7413, 97.9976 )
+material = ExtResource( 5 )
+
+[node name="maze" type="CSGBox" parent="."]
+transform = Transform( -1.09278e-07, 0, -1, 0, 0.3, 0, 2.5, 0, -4.37114e-08, -3.93483, 2.12909, -5.4872 )
+material_override = ExtResource( 6 )
+operation = 1
+use_collision = true
+width = 0.001
+height = 0.001
+
+[node name="MazeP1" type="CSGBox" parent="maze"]
+process_priority = 1
+transform = Transform( -1.74846e-08, 0, 0.4, 0, 3.33333, 0, -1, 0, -4.37112e-08, 2.19488, -7.09697, -3.93483 )
+visible = false
+width = 0.001
+height = 0.001
+script = SubResource( 15 )
+coin_id = 9
+
+[node name="PathPiece001" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 0.102856, 0.313315, 6.26042e-05, -0.0179541, 0.161545, 3.78675e-13, -0.000536628, -0.00163465, 0.0749997, -8.59654, -5.97091, 2.6427 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="PathPiece002" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 24.2783, 0, -0.00425826, 0, 0.781101, 0, 0.187912, 0, 3.43845, -35.7194, -5.97091, 2.47345 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece003" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.04981e-07, 0, -3.63851, 0, 0.781053, 0, 11.5527, 0, -1.59044e-07, -84.6409, -5.97091, -22.5803 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece004" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.0822, 0, -7.77647e-08, 0, 0.781053, 0, -9.23331e-07, 0, 2.9651, -71.2321, -5.97091, -56.58 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece005" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -1.16458e-06, 0, -3, 0, 0.75, 0, 26.6425, 0, -1.31134e-07, -10.4968, -5.97091, -62.442 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece006" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.1243, 0, -8.37941e-08, 0, 0.781053, 0, -9.26086e-07, 0, 3.195, -20.5288, -5.97091, -33.4722 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece007" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -2.1633e-07, 0, -16.2746, 0, 0.781057, 0, 4.94908, 0, -7.11386e-07, -26.7287, -6.02627, -83.6387 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece008" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 1.9669, 0, -3.27833e-07, 0, 0.781201, 0, -1.28964e-07, 0, 12.5, -41.9424, -5.97091, -70.0092 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece009" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 7.594, 0, -8.23516e-08, 0, 0.781201, 0, -4.97916e-07, 0, 3.14, -36.5945, -5.97091, -54.9637 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece010" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -6.44931e-07, 0, -4.61745, 0, 0.781053, 0, 14.7544, 0, -2.01835e-07, -115.935, -5.97091, 16.6736 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece011" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -30.983, 0, -0.0078022, 0, 0.780243, 0, 0.537984, 0, -2.80838, -113.559, -5.97091, -12.2542 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece012" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -1.55754e-06, 0, -1.88356, 0, 0.781048, 0, 35.6325, 0, -8.2333e-08, -105.511, -5.97091, -35.283 )
+material_override = ExtResource( 6 )
+use_collision = true
+width = 1.13238
+
+[node name="PathPiece013" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.1237, 0, -8.46205e-08, 0, 0.781053, 0, -9.26046e-07, 0, 3.2265, -106.48, -5.97091, 4.89287 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece014" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.1237, 0, -8.46205e-08, 0, 0.781053, 0, -9.26046e-07, 0, 3.2265, -71.4216, -5.97091, -30.5422 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece015" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -8.55291e-07, 0, -3.95074, 0, 0.781053, 0, 19.5669, 0, -1.72692e-07, -59.5631, -5.97091, -35.618 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece016" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.98793e-07, 0, -3.96116, 0, 0.781053, 0, 13.6989, 0, -1.73148e-07, -95.3533, -5.97091, 15.9199 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece017" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 19.0983, 0, 0.00230788, 0, 0.781053, 0, -0.0996409, 0, 2.76483, -72.1318, -5.97091, 26.0345 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece019" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 19.0973, 0, -7.28459e-08, 0, 0.780934, 0, -1.25215e-06, 0, 2.77755, -43.2277, -5.97091, -18.4162 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece020" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -7.99362e-07, 0, -4.80485, 0, 0.781161, 0, 18.2874, 0, -2.10027e-07, -26.4497, -5.97091, -17.8684 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece021" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -0.0899157, 0, 4.98672, 0, 0.781053, 0, -13.388, 0, -0.209323, -57.9508, -5.97091, 12.4346 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece022" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.68777e-07, 0, -3.1792, 0, 0.781047, 0, 13.0122, 0, -1.38967e-07, -165.26, -5.97091, -1.49226 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece023" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.78639, 0, -0.0464589, 0, 0.78105, 0, 0.235655, 0, -7.1299, -188.874, -5.97091, 16.0213 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece024" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -7.60529e-07, 0, -3.05769, 0, 0.781047, 0, 17.399, 0, -1.33656e-07, -222.049, -5.97091, 15.4073 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece025" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.756, 0, -1.11883e-07, 0, 0.78105, 0, -9.6751e-07, 0, 4.26603, -230.469, -5.97091, 1.46187 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece026" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -0.118893, 0, -6.25529e-05, 0, 0.186733, 0, 0.000620345, 0, -0.0749328, -238.849, -5.97091, -72.3222 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="PathPiece027" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -24.2566, 0, 0.00425441, 0, 0.780402, 0, -0.187742, 0, -3.43538, -211.75, -5.97091, -72.1532 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece028" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -4.617, 0, 7.64947e-07, 0, 0.780301, 0, -7.06353e-07, 0, -12.5, -162.872, -5.97091, -47.1218 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece029" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1116, 0, 1.95346e-07, 0, 0.780355, 0, -2.15894e-06, 0, -3.19215, -146.975, -5.97091, -118.981 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece030" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1111, 0, 0.0110079, 0, 0.780355, 0, -0.304143, 0, -3.19203, -169.958, -5.97091, -125.072 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece031" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -26.8841, 0, 0.0209721, 0, 0.780355, 0, -0.304143, 0, -3.19203, -131.312, -5.97091, -148.241 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece032" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1111, 0, 0.0110079, 0, 0.780355, 0, -0.304143, 0, -3.19203, -171.752, -5.97091, -148.797 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece033" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 14.054, 0, -9.24421e-08, 0, 0.780177, 0, -9.21485e-07, 0, 3.52475, -176.269, -5.97091, -13.1526 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece034" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1111, 0, 0.0110079, 0, 0.780355, 0, -0.304143, 0, -3.19203, -212.573, -5.97091, -36.1907 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece035" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 0.0376957, 0, -5.70446, 0, 0.780355, 0, 5.21115, 0, 0.257902, -204.102, -5.97091, -27.8388 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece036" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -1.36274e-07, 0, -11.9241, 0, 0.780355, 0, 3.1176, 0, -5.21219e-07, -210.353, -5.97091, -19.9877 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece037" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1111, 0, 0.0110079, 0, 0.780355, 0, -0.304143, 0, -3.19203, -196.943, -5.97091, -149.34 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece038" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1111, 0, 0.0110079, 0, 0.780355, 0, -0.304143, 0, -3.19203, -203.912, -5.97091, -106.887 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece039" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.35834e-07, 0, -3.9539, 0, 0.780355, 0, 12.2585, 0, -1.72831e-07, -214.393, -5.97091, -99.6545 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece040" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -0.211291, 0, 4.31229, 0, 0.780355, 0, -13.7799, 0, -0.41326, -205.786, -5.97091, -136.794 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece041" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 2.151, 0, -1.41461e-07, 0, 0.780301, 0, -2.56415e-07, 0, 11.0537, -182.262, -5.97091, -135.915 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece042" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -6.44355e-07, 0, -4.61332, 0, 0.780355, 0, 14.7412, 0, -2.01655e-07, -131.051, -5.97091, -86.3405 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece043" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 30.9553, 0, 0.00779533, 0, 0.779548, 0, -0.537511, 0, 2.80587, -133.98, -5.97091, -57.4387 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece044" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -6.44355e-07, 0, -4.61332, 0, 0.780355, 0, 14.7412, 0, -2.01655e-07, -131.051, -5.97091, -107.963 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="StaticBody" type="StaticBody" parent="maze/MazeP1"]
+transform = Transform( -6.36263e-07, 0, -1.548, 0, 0.78, 0, 14.556, 0, -6.76652e-08, -94.1238, -7.51494, -127.228 )
+script = SubResource( 11 )
+direction = Vector3( 0, 0, 1 )
+distance = 45.0
+speed = 3.5
+
+[node name="CollisionShape" type="CollisionShape" parent="maze/MazeP1/StaticBody"]
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 2.84217e-14, 0, 1, 0.801502, 1.98827, -8.40434 )
+shape = SubResource( 12 )
+
+[node name="PathPiece045" type="CSGBox" parent="maze/MazeP1/StaticBody/CollisionShape"]
+transform = Transform( -4.37114e-08, 0, 0.782386, 0, 1, 0, -1.27814, 0, -4.37115e-08, 0.0319839, 0, -0.0612469 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece046" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1104, 0, 0.0118249, 0, 0.780355, 0, -0.323513, 0, -3.22348, -141.052, -5.97091, -74.5705 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece047" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -14.1104, 0, 0.0118249, 0, 0.780355, 0, -0.323513, 0, -3.22348, -176.08, -5.97091, -38.5165 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece048" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -8.54528e-07, 0, -3.94721, 0, 0.780355, 0, 19.5494, 0, -1.72538e-07, -187.927, -5.97091, -34.0957 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece049" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.98258e-07, 0, -3.95762, 0, 0.780355, 0, 13.6866, 0, -1.72993e-07, -152.169, -5.97091, -85.5875 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece050" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -19.0812, 0, -0.00230598, 0, 0.780355, 0, 0.099559, 0, -2.76235, -175.37, -5.97091, -95.6932 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece051" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -0.0755157, 0, 4.67751, 0, 0.780355, 0, -13.3293, 0, -0.165626, -189.528, -5.97091, -96.4815 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece052" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 19.0801, 0, 0.00421024, 0, 0.780235, 0, -0.180929, 0, 2.77503, -204.248, -5.97091, -51.2822 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece053" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -7.98647e-07, 0, -4.80055, 0, 0.780466, 0, 18.271, 0, -2.09839e-07, -221.011, -5.97091, -51.8295 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece054" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -5.84765e-07, 0, -4.98297, 0, 0.780355, 0, 13.3779, 0, -2.17812e-07, -189.538, -5.97091, -82.1055 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece055" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 0.0324187, 0, -4.61331, 0, 0.780357, 0, 14.7412, 0, 0.0101453, -240.023, -5.97091, -37.2822 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece056" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( 0.0324187, 0, -4.61331, 0, 0.780357, 0, 14.7412, 0, 0.0101453, -240.07, -5.97091, -58.9045 )
+material_override = ExtResource( 6 )
+use_collision = true
+
+[node name="PathPiece057" type="CSGBox" parent="maze/MazeP1"]
+transform = Transform( -0.332261, 0, 3.2215, 0, 0.781392, 0, -34.7327, 0, -0.192611, -140.999, -5.97091, -11.8696 )
+material_override = ExtResource( 6 )
+use_collision = true
+width = 2.68134
+
+[node name="MazeP2" type="CSGBox" parent="maze"]
+transform = Transform( -1.74846e-08, 0, 0.4, 0, 3.33333, 0, -1, 0, -4.37112e-08, 2.26836, -7.2154, -3.9489 )
+visible = false
+width = 0.001
+height = 0.001
+depth = 0.001
+script = SubResource( 1 )
+coin_id = 8
+
+[node name="MovingBody" type="StaticBody" parent="maze/MazeP2"]
+transform = Transform( 31.4205, 0, -0.0332969, 0, 0.609218, 0, 0.127783, 0, 8.18737, -461.948, -11.8404, 467.579 )
+script = SubResource( 13 )
+direction = Vector3( 0, 0, 1 )
+distance = 80.0
+speed = 7.0
+
+[node name="CollisionShape" type="CollisionShape" parent="maze/MazeP2/MovingBody"]
+transform = Transform( 0.0693352, 0, -5.09317e-11, 0, 1, 0, 6.98492e-10, 0, 0.00545997, 10.6598, 0.999966, -58.6954 )
+shape = SubResource( 14 )
+
+[node name="PathPiece020" type="CSGBox" parent="maze/MazeP2/MovingBody/CollisionShape"]
+transform = Transform( -0.0177018, 0, 20, 0, 20, 0, -9.99998, 0, -0.0354036, 10.2982, 7.64626, -50.2034 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece001" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -100.552, -5.97091, 49.3435 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece002" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -77.5485, -5.97091, 55.4395 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece003" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -101.583, -5.97091, 78.629 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece004" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.4639e-07, 0, -2.5, 0, 0.7812, 0, 12.5, 0, -1.09278e-07, -66.239, -5.97091, 71.0811 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece005" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1242, 0, -8.37941e-08, 0, 0.781053, 0, -9.26089e-07, 0, 3.195, -50.539, -5.97091, 79.729 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece006" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -4.50662e-07, 0, -3, 0, 0.75, 0, 10.31, 0, -1.31134e-07, -140.283, -21.7305, 64.6353 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece008" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 5.52096, 0, -3.24979e-07, 0, 0.781053, 0, -3.61994e-07, 0, 12.3912, -41.6889, -5.97091, 67.1723 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece009" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 2.15269, 0, -2.5376e-07, 0, 0.781053, 0, -1.41145e-07, 0, 9.67568, -65.609, -5.97091, 54.6368 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece010" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -6.44931e-07, 0, -4.61745, 0, 0.781053, 0, 14.7544, 0, -2.01835e-07, -115.935, -5.97091, 44.0963 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece011" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -6.44931e-07, 0, -4.61745, 0, 0.781053, 0, 14.7544, 0, -2.01835e-07, -115.935, -5.69491, 66.8453 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece012" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.68777e-07, 0, -3.1792, 0, 0.781047, 0, 13.0122, 0, -1.38967e-07, -196.935, -5.97091, 42.1738 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece013" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.68777e-07, 0, -3.1792, 0, 0.78105, 0, 13.0122, 0, -1.38967e-07, -196.935, -5.97091, 21.7105 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece014" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.68777e-07, 0, -3.1792, 0, 0.781047, 0, 13.0122, 0, -1.38967e-07, -165.26, -5.97091, 44.5143 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece015" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.68777e-07, 0, -3.1792, 0, 0.781047, 0, 13.0122, 0, -1.38967e-07, -165.26, -5.97091, 21.2335 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece016" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 16.3109, 0, -1.10284e-07, 0, 0.781047, 0, -1.06946e-06, 0, 4.20505, -179.043, -5.97091, 57.9703 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece017" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0529159, 0, 3.17917, 0, 0.781047, 0, -13.0121, 0, 0.0129287, -164.32, -5.97091, 69.7565 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece018" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0529159, 0, 3.17917, 0, 0.78105, 0, -13.0121, 0, 0.0129287, -164.404, -5.97091, 90.2198 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece019" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0529159, 0, 3.17917, 0, 0.781047, 0, -13.0121, 0, 0.0129287, -195.986, -5.97091, 67.2873 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece021" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0529159, 0, 3.17917, 0, 0.781047, 0, -13.0121, 0, 0.0129287, -196.173, -5.97091, 113.294 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece022" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 5.7873, 0, 0.017464, 0, 0.78105, 0, -0.212122, 0, 7.13005, -172.488, -5.97091, 95.876 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece023" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -14.8212, 0, 0.0146336, 0, 0.781047, 0, -0.0602714, 0, -3.59843, -127.33, -5.97091, 77.7391 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece024" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0707556, 0, 3.05766, 0, 0.781047, 0, -17.3988, 0, 0.0124346, -139.316, -5.97091, 96.625 )
+material_override = ExtResource( 6 )
+width = 1.83451
+
+[node name="PathPiece025" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -14.7559, 0, 0.0173484, 0, 0.78105, 0, -0.0600059, 0, -4.266, -130.952, -5.97091, 110.605 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece026" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.118895, 0, -0.00024217, 0, 0.186733, 0, -0.000136849, 0, 0.0749325, -122.872, -5.4651, 184.422 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="PathPiece027" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 24.2556, 0, -0.0182248, 0, 0.780402, 0, 0.286384, 0, 3.43533, -149.97, -5.97091, 184.143 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece028" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -14.0539, 0, 0.0143339, 0, 0.780177, 0, -0.0571511, 0, -3.52473, -185.211, -5.97091, 124.999 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece029" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1097, 0, -0.0239885, 0, 0.780354, 0, 0.361526, 0, 3.19195, -149.001, -5.97091, 148.184 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece030" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.0165037, 0, 5.70546, 0, 0.780354, 0, -5.21128, 0, -0.234702, -157.438, -5.97091, 139.798 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece031" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0126782, 0, 11.924, 0, 0.780354, 0, -3.11758, 0, 0.0484913, -151.155, -5.97091, 131.972 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece033" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1097, 0, -0.0239885, 0, 0.780354, 0, 0.361526, 0, 3.19195, -157.95, -5.97091, 218.845 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece034" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.049851, 0, 3.95387, 0, 0.780354, 0, -12.2584, 0, 0.0160791, -147.439, -5.97091, 211.655 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece037" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.109, 0, -0.0249334, 0, 0.780354, 0, 0.380893, 0, 3.2234, -185.503, -5.97091, 150.362 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece038" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0795007, 0, 3.94718, 0, 0.780354, 0, -19.5493, 0, 0.0160519, -173.639, -5.97091, 145.989 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece039" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0213102, 0, -4.67814, 0, 0.780354, 0, 13.3295, 0, 0.146603, -172.291, -5.97091, 208.381 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece040" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -19.0807, 0, 0.00707473, 0, 0.780234, 0, 0.103337, 0, -2.77503, -157.388, -5.97091, 163.242 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece041" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0743018, 0, 4.80051, 0, 0.780465, 0, -18.2709, 0, 0.0195222, -140.627, -5.97091, 163.857 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece042" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.0544034, 0, 4.98293, 0, 0.780354, 0, -13.3778, 0, 0.020264, -172.223, -5.97091, 194.005 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece043" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 4.617, 0, 1.76386e-14, 0, 0.780303, 0, -2.21509e-13, 0, 17.4648, -57.6175, -5.97091, 132.236 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece044" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1113, 0, 0.0197223, 0, 0.780354, 0, -0.0871851, 0, 3.1921, -99.8447, -5.97091, 185.424 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece045" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -76.8245, -5.97091, 191.372 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece046" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -100.694, -5.97091, 214.689 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece047" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -74.884, -5.97091, 215.086 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece048" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -34.7594, -5.97091, 102.23 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece049" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.0698917, 0, 5.70276, 0, 0.780354, 0, -5.21082, 0, -0.293142, -43.2819, -5.97091, 93.9301 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece050" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.0192618, 0, 11.9239, 0, 0.780354, 0, -3.11755, 0, -0.0736717, -37.0795, -5.97091, 86.0403 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece051" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -49.6901, -5.97091, 215.473 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece052" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1127, 0, 0.00871399, 0, 0.780354, 0, 0.216953, 0, 3.19205, -42.9835, -5.97091, 172.978 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece053" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.0757379, 0, 3.95382, 0, 0.780354, 0, -12.2583, 0, -0.0244287, -32.5474, -5.97091, 165.681 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece054" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 0.296425, 0, -4.30965, 0, 0.780354, 0, 13.7784, 0, 0.439895, -40.9248, -5.97091, 202.873 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece055" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -2.15096, 0, -0.0682942, 0, 0.7803, 0, 0.0132901, 0, -11.0535, -64.4538, -5.97091, 202.139 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece056" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.091077, 0, 4.61323, 0, 0.780354, 0, -14.7409, 0, -0.0285028, -115.97, -5.97091, 152.882 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece057" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.091077, 0, 4.61323, 0, 0.780354, 0, -14.7409, 0, -0.0285028, -115.837, -5.97091, 174.504 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece058" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 14.1121, 0, 0.00809132, 0, 0.780354, 0, 0.236327, 0, 3.2235, -106.042, -5.97091, 141.05 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece059" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 13.3266, 0.256723, 0.00764093, -4.64263, 0.736919, -0.0026619, 0.236327, 3.28343e-14, 3.2235, -107.519, -5.97091, 215.648 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece060" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.0845612, 0, 3.95754, 0, 0.780354, 0, -13.6864, 0, -0.0244517, -94.8571, -5.97091, 151.998 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece061" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( 19.0802, 0, 0.019373, 0, 0.780354, 0, -0.217449, 0, 2.76227, -71.5941, -5.97091, 161.96 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece062" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -5.8265e-07, 0, 4.68044, 0, 0.780354, 0, -13.3295, 0, -2.04589e-07, -57.4315, -5.97091, 162.661 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece063" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -19.0786, 0, -0.0213555, 0, 0.780234, 0, 0.298812, 0, -2.77495, -42.9911, -5.97091, 117.372 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece064" type="CSGBox" parent="maze/MazeP2"]
+transform = Transform( -0.112885, 0, 4.80046, 0, 0.780465, 0, -18.2707, 0, -0.0296595, -26.225, -5.97091, 117.816 )
+material_override = ExtResource( 6 )
+
+[node name="MazeP3" type="CSGBox" parent="maze"]
+width = 0.001
+height = 0.001
+depth = 0.001
+script = SubResource( 10 )
+coin_id = 7
+
+[node name="PathPiece001" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -7.12973e-07, 0, 1.68202, 0, 2.60349, 0, -16.3109, 0, -7.35234e-08, 25.383, -27, 230.623 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece002" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -7.12973e-07, 0, 1.68202, 0, 2.60349, 0, -16.3109, 0, -7.35234e-08, 25.383, -27, 200.28 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece003" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.20848, 0, 0, 0, 2.60349, 0, -1.13687e-13, 0, 3.17836, 20.3484, -27, 243.143 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece004" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -6.47861e-07, 0, 1.43938, 0, 2.60349, 0, -14.8213, 0, -6.29174e-08, 16.5446, -27, 230.415 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece005" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 21.2512, -27, 270.11 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece006" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.0993521, 0, -2.85192, 0, 2.60351, 0, 5.78586, 0, 0.0621393, 28.2774, -27, 293.686 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece007" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.012981, 0, 1.70641, 0, 2.60351, 0, -14.756, 0, -0.00938214, 22.4903, -27, 335.312 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece008" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.000352725, 0, -0.029973, 0, 0.622443, 0, 0.118891, 0, 0.00022735, -7.0159, -27, 343.855 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="PathPiece009" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0537584, 0, -1.37415, 0, 2.60135, 0, 24.257, 0, 0.00330094, -6.97214, -27, 316.755 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece010" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.00406121, 0, -5, 0, 2.60101, 0, 4.61699, 0, 0.02749, 2.99738, -27, 267.823 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece011" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.0124129, 0, -1.27686, 0, 2.60119, 0, 14.1116, 0, 0.00702023, -25.7604, -27, 252.084 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece012" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -28.1764, -27, 275.08 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece013" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.465, -27, 251.118 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece014" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.6648, -27, 276.926 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece015" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0123635, 0, 1.4099, 0, 2.6006, 0, -14.054, 0, -0.00775177, 16.5968, -27, 281.145 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece016" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, 7.41344, -27, 317.499 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece017" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 6.15437, 0, 0.1345, 0, 2.60119, 0, -0.145136, 0, 5.70332, 13.5585, -27, 309.658 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece018" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 1.16706, -0.0054197, 1.67863, 0.192609, 2.60074, 0.00162007, -1.09702, 0.00506046, 11.1613, 21.289, -27, 315.009 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece019" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -37.8598, -27, 302.118 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece020" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.109244, 0, -1.27682, 0, 2.60119, 0, 14.1117, 0, -0.00398774, -20.8727, -27, 308.994 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece021" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 4.9034, 0, 0.0034781, 0, 2.60119, 0, -0.0269594, 0, 3.95389, -17.9703, -27, 319.459 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece022" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -5.51178, 0, -0.169097, 0, 2.60119, 0, 0.241596, 0, -4.31137, -32.8337, -27, 310.934 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece023" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0018923, 0, 4.42146, 0, 2.60101, 0, -2.15099, 0, -0.0243098, -32.5027, -27, 287.408 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece024" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.116992, 0, -1.2894, 0, 2.60119, 0, 14.1111, 0, -0.00473563, -8.00125, -27, 246.063 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece025" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.116992, 0, -1.2894, 0, 2.60119, 0, 14.1111, 0, -0.00473563, 6.45108, -27, 281.012 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece026" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 7.81976, 0, 0.00347226, 0, 2.60119, 0, -0.0429934, 0, 3.9472, 8.22977, -27, 292.849 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece027" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.47464, 0, 0.00348141, 0, 2.60119, 0, -0.0300998, 0, 3.95761, -12.3982, -27, 257.204 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece028" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.0566092, 0, -1.10494, 0, 2.60119, 0, 19.0809, 0, 0.00838113, -16.4201, -27, 280.427 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece029" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -5.33163, 0, -0.0703651, 0, 2.60119, 0, 0.10483, 0, -4.67713, -16.723, -27, 294.587 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece030" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0891564, 0, 1.11, 0, 2.60079, 0, -19.0797, 0, -0.0103132, 1.36956, -27, 309.208 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece031" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 7.3084, 0, 0.00422296, 0, 2.60156, 0, -0.0401824, 0, 4.80054, 1.16541, -27, 325.972 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece032" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.35117, 0, 0.00438337, 0, 2.60119, 0, -0.029421, 0, 4.98296, -10.9726, -27, 294.565 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece033" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.0229812, 0, -4.99963, 0, 2.60101, 0, 4.61664, 0, 0.15555, 15.6024, -27, 407.078 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece034" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.070241, 0, -1.27676, 0, 2.60119, 0, 14.1105, 0, 0.0397231, -7.35884, -27, 366.888 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece035" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -9.68044, -27, 389.945 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece036" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -19.0668, -27, 366.222 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece037" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0514088, 0, -1.27677, 0, 2.60119, 0, 14.1138, 0, 0.0287147, -19.1608, -27, 392.034 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece038" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0107069, 0, 4.42114, 0, 2.60101, 0, -2.15083, 0, -0.137552, -13.956, -27, 402.383 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece039" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.89604, 0, 0.0229631, 0, 2.60119, 0, -0.18344, 0, 4.61296, 5.61728, -27, 350.559 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece040" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.89604, 0, 0.0229631, 0, 2.60119, 0, -0.18344, 0, 4.61296, -3.03097, -27, 350.828 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece041" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -0.0591598, 0, -1.28935, 0, 2.60119, 0, 14.1133, 0, 0.028289, 10.3747, -27, 360.413 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece042" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.47423, 0, 0.0196994, 0, 2.60119, 0, -0.170316, 0, 3.95731, 6.0236, -27, 371.666 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece043" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 0.134799, 0, -1.10485, 0, 2.60119, 0, 19.0785, 0, 0.0366805, 2.09711, -27, 394.991 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece044" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -5.33093, 0, -0.0895282, 0, 2.60119, 0, 0.24138, 0, -4.67509, 1.85225, -27, 409.158 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece045" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( 5.35077, 0, 0.0248031, 0, 2.60119, 0, -0.166475, 0, 4.98258, 7.60228, -27, 408.989 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece046" type="CSGBox" parent="maze/MazeP3"]
+transform = Transform( -13.8928, 0, -0.0798785, 0, 2.60465, 0, 0.408647, 0, -3.22107, 17.079, -27, 245.872 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="MazeP4" type="CSGBox" parent="maze"]
+width = 0.001
+height = 0.001
+depth = 0.001
+script = SubResource( 2 )
+coin_id = 6
+
+[node name="PathPiece001" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 13.8935, 0, 0.0718038, 0, 2.60464, 0, -0.191016, 0, 3.22226, 51.6237, -27, 216.541 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="PathPiece002" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.00751042, 0, 4.99997, 0, 2.601, 0, -4.61696, 0, 0.0508328, 65.76, -27, 194.811 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece003" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0229552, 0, 1.27685, 0, 2.60118, 0, -14.1115, 0, 0.0129813, 94.4778, -27, 211 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece004" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 96.9514, -27, 188.042 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece005" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.18, -27, 212.149 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece006" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.444, -27, 186.345 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece007" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.89644, 0, 0.00750423, 0, 2.60118, 0, -0.0599467, 0, -4.61328, 81.3956, -27, 226.791 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece008" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.89644, 0, 0.00750423, 0, 2.60118, 0, -0.0599467, 0, -4.61328, 90.0445, -27, 226.879 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece009" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.152357, 0, 1.28936, 0, 2.60118, 0, -14.109, 0, 0.0249333, 76.7039, -27, 216.743 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece010" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.4746, 0, 0.00643764, 0, 2.60118, 0, -0.0556581, 0, -3.95759, 81.1287, -27, 205.671 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece011" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.00878531, 0, 1.10494, 0, 2.60118, 0, -19.0814, 0, 0.00892732, 85.2088, -27, 182.511 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece012" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -4.62098, 0, -0.00911922, 0, 2.60351, 0, 0.0723868, 0, -3.63844, 75.8793, -27, 380.788 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece013" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 47.0704, -27, 365.328 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece014" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 44.6897, -27, 388.369 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece015" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0354002, 0, -1.27798, 0, 2.60351, 0, 14.1239, 0, 0.0200193, 35.3539, -27, 364.48 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece017" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0352949, 0, -1.18602, 0, 2.60351, 0, 14.0819, 0, 0.0185787, 89.5125, -27, 393.984 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece018" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -4.12392, 0, -0.00751891, 0, 2.5, 0, 0.0646004, 0, -2.99994, 34.7126, -27, 325.79 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece019" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.03401, 0, 1.83225, 0, 2.60351, 0, -13.5697, 0, -0.0287017, 37.6346, -27, 336.235 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece020" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.00539539, 0, -3.8702, 0, 2.60351, 0, 2.15265, 0, 0.0606262, 45.0408, -27, 400.304 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece021" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 60.0996, -27, 349.741 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece022" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.292843, 0, 1.12331, 0, 2.60081, 0, -30.979, 0, -0.0253989, 71.6765, -27, 351.936 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece023" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -14.2527, 0, -0.00472078, 0, 2.60349, 0, 0.223266, 0, -1.88352, 80.908, -27, 359.839 )
+material_override = ExtResource( 6 )
+width = 1.13238
+
+[node name="PathPiece024" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 49.1307, -27, 349.913 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece025" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.90164, 0, -0.0115728, 0, 2.60351, 0, 0.0924479, 0, -4.61736, 40.0313, -27.2606, 350.055 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece026" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0353989, 0, -1.29058, 0, 2.60351, 0, 14.1234, 0, 0.0202167, 64.8355, -27, 359.122 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece027" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 13.892, 0, 0.0851172, 0, 2.60464, 0, -0.549885, 0, 3.22023, 71.4539, -27, 324.499 )
+material_override = ExtResource( 6 )
+width = 2.68134
+
+[node name="PathPiece028" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0353989, 0, -1.29058, 0, 2.60351, 0, 14.1234, 0, 0.0202167, 79.0971, -27, 393.957 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece029" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -7.8266, 0, -0.00990181, 0, 2.60351, 0, 0.122602, 0, -3.95066, 81.1571, -27, 405.784 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece030" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.47944, 0, -0.00992787, 0, 2.60351, 0, 0.0858344, 0, -3.96108, 60.4527, -27, 370.317 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece031" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0877222, 0, -1.1059, 0, 2.60351, 0, 19.0973, 0, 0.0196318, 56.4651, -27, 393.602 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece032" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.33618, 0, -0.078041, 0, 2.60351, 0, 0.159174, 0, -4.68057, 61.176, -27, 407.698 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece033" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.35489, 0, 0.096226, 0, 2.60351, 0, -0.173801, 0, 4.98531, 61.9405, -27, 407.697 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece034" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 49.6967, -27, 268.902 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece035" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.6035, 0, 0.0815316, 0, -3.17914, 57.8818, -27, 268.774 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece036" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 48.8399, -27, 300.591 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece037" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 58.1521, -27, 300.445 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece038" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20476, 0, -0.00796801, 0, 2.60349, 0, 0.0815316, 0, -3.17914, 67.2422, -27, 300.303 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece039" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.108763, 0, 2.85179, 0, 2.6035, 0, -5.7848, 0, -0.0911328, 60.1777, -27, 276.799 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece040" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.2839, -27, 231.379 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece041" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.36, -27, 261.721 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece042" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0408809, 0, -1.68199, 0, 2.60349, 0, 16.3106, 0, 0.0263481, 43.4231, -27, 286.893 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece043" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.20838, 0, -0.00796595, 0, 2.60349, 0, 0.0815882, 0, -3.1783, 48.2871, -27, 218.78 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece044" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0371474, 0, -1.43935, 0, 2.60349, 0, 14.821, 0, 0.0225472, 52.1227, -27, 231.449 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece045" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -6.95945, 0, -0.00766351, 0, 2.60349, 0, 0.109018, 0, -3.05763, 60.3401, -27, 243.621 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece046" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0369837, 0, -1.70638, 0, 2.6035, 0, 14.7557, 0, 0.0267301, 65.8971, -27, 235.114 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece047" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.000546116, 0, 0.0299724, 0, 0.622443, 0, -0.118887, 0, -0.000532068, 95.3892, -27, 226.272 )
+material_override = ExtResource( 6 )
+snap = 0.0001
+use_collision = true
+width = 64.846
+height = 2.26
+depth = 92.0
+material = ExtResource( 4 )
+
+[node name="PathPiece048" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0143005, 0, 1.37414, 0, 2.60134, 0, -24.2573, 0, -0.0172711, 95.3895, -27, 253.371 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece049" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.0115714, 0, 4.99991, 0, 2.601, 0, -4.61691, 0, -0.0783222, 85.4996, -27, 302.405 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece050" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.0353674, 0, 1.27684, 0, 2.60118, 0, -14.1113, 0, -0.0200013, 114.283, -27, 317.852 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece051" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 116.661, -27, 294.831 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece052" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 125.989, -27, 318.698 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece053" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 126.147, -27, 292.888 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece054" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0352242, 0, -1.40987, 0, 2.60059, 0, 14.0537, 0, 0.0220854, 71.8786, -27, 289.221 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece055" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 81.0027, -27, 252.774 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece056" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -2.08433, 0, -0.117456, 0, 2.60118, 0, 0.0703472, 0, -5.70273, 77.6832, -27, 261.297 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece057" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -1.24702, 0, -0.0298854, 0, 2.60118, 0, 0.0195343, 0, -11.9239, 74.5272, -27, 255.095 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece058" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 126.301, -27, 267.694 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece059" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0862882, 0, 1.27681, 0, 2.60118, 0, -14.1127, 0, -0.00899305, 109.303, -27, 260.991 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece060" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -4.90331, 0, -0.00990968, 0, 2.60118, 0, 0.0768095, 0, -3.95382, 106.383, -27, 250.556 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece061" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.00539122, 0, -4.42139, 0, 2.601, 0, 2.15096, 0, 0.0692605, 120.968, -27, 282.459 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece062" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.89637, 0, -0.0115624, 0, 2.60118, 0, 0.0923654, 0, -4.61323, 101.267, -27, 333.98 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece063" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.292584, 0, -1.12231, 0, 2.59849, 0, 30.9513, 0, 0.0253764, 89.6987, -27, 331.232 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece064" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.89637, 0, -0.0115624, 0, 2.60118, 0, 0.0923654, 0, -4.61323, 109.915, -27, 333.844 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece065" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0147786, 0, -4.61323, 0, 2.60118, 0, 5.89636, 0, 0.0722655, 92.876, -27, 387.547 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece066" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0940378, 0, 1.2894, 0, 2.60118, 0, -14.1121, 0, -0.00837307, 96.5336, -27, 324.053 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece067" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.0940378, 0, 1.2894, 0, 2.60118, 0, -14.1121, 0, -0.00837307, 82.0245, -27, 289.251 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece068" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -7.81962, 0, -0.00989289, 0, 2.60118, 0, 0.122493, 0, -3.94713, 80.2265, -27, 277.432 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece069" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.47454, 0, -0.009919, 0, 2.60118, 0, 0.0857575, 0, -3.95754, 100.912, -27, 312.867 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece070" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.0876467, 0, 1.10491, 0, 2.60118, 0, -19.0802, 0, -0.0196143, 104.897, -27, 289.603 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece071" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.33141, 0, 0.0779726, 0, 2.60118, 0, -0.159033, 0, 4.67638, 105.176, -27, 275.44 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece072" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.120191, 0, -1.10998, 0, 2.60078, 0, 19.0786, 0, 0.021598, 87.0601, -27, 261.004 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece073" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -7.30827, 0, -0.0120317, 0, 2.60155, 0, 0.114483, 0, -4.80046, 87.2369, -27, 244.238 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece074" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -5.35107, 0, -0.0124888, 0, 2.60118, 0, 0.0838235, 0, -4.98287, 99.426, -27, 275.521 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece075" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 38.7455, -27, 301.689 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece076" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.60351, 0, -0.0286165, 0, 3.17919, 30.5602, -27, 301.734 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece077" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 39.6538, -27, 270.009 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece078" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.20486, 0, 0.00279664, 0, 2.6035, 0, -0.0286165, 0, 3.17919, 30.3416, -27, 270.06 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece081" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 6.95958, 0, 0.00268979, 0, 2.6035, 0, -0.0382641, 0, 3.05768, 28.061, -27, 326.862 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece082" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 0.14461, 0, 1.27678, 0, 2.60118, 0, -14.1097, 0, 0.0239884, 106.702, -27, 161.156 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece083" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( 5.51228, 0, 0.158288, 0, 2.60118, 0, -0.155253, 0, 4.31393, 101.698, -27, 152.262 )
+material_override = ExtResource( 6 )
+
+[node name="PathPiece084" type="CSGBox" parent="maze/MazeP4"]
+transform = Transform( -0.00349877, 0, -4.42144, 0, 2.601, 0, 2.15098, 0, -0.0449506, 101.308, -27, 175.783 )
+material_override = ExtResource( 6 )
+
+[node name="CoinPlatforms" type="Spatial" parent="."]
+
+[node name="Coin platform 1" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.154, 0, 0, 0, 1, 0, 0, 0, 0.154, -91.0225, -6.37815, -139.657 )
+visible = false
+use_collision = true
+width = 183.37
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 16 )
+coin_id = 9
+
+[node name="Coin platform 2" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.154, 0, 0, 0, 1, 0, 0, 0, 0.154, -20.3588, -6.05774, 165.505 )
+visible = false
+use_collision = true
+width = 183.37
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 3 )
+coin_id = 8
+
+[node name="Coin platform 3" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.138, 0, 0, 0, 1, 0, 0, 0, 0.146, -254.346, -6.32075, -113.982 )
+visible = false
+use_collision = true
+width = 183.37
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 4 )
+coin_id = 7
+
+[node name="Coin platform 4" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.374969, 0, -0.00223571, 0, 1, 0, 0.0047908, 0, 0.174986, -296.855, -6.1913, 327.124 )
+visible = false
+use_collision = true
+width = 183.37
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 5 )
+coin_id = 6
+
+[node name="Coin platform 5" type="CSGBox" parent="CoinPlatforms"]
+transform = Transform( 0.125809, 0, -0.00223571, 0, 1, 0, 0.0016074, 0, 0.174986, -417, -6.191, 106 )
+use_collision = true
+width = 170.0
+depth = 160.0
+material = ExtResource( 3 )
+
+[node name="Spawn platform" type="CSGBox" parent="."]
+transform = Transform( 0.154, 0, 0, 0, 0.154, 0, 0, 0, 0.154, 4.71904, -6.02407, -0.143871 )
+visible = false
+generate_lightmap = false
+use_collision = true
+width = 183.37
+depth = 160.0
+material = ExtResource( 3 )
+script = SubResource( 18 )
+coin_id = 10
+
+[node name="player" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -410.33, 5.18144, 102.625 )
+mass = 0.69
+
+[node name="DieBox" parent="." instance=ExtResource( 8 )]
+transform = Transform( -1719.26, 7.51512e-07, 0, 1.74846e-05, 1, 0, 0, 0, 1745.99, -260.105, -21.341, 58.9985 )
+
+[node name="coins" type="Spatial" parent="."]
+
+[node name="fourth" type="Spatial" parent="coins"]
+visible = false
+script = SubResource( 6 )
+
+[node name="Collectible2" parent="coins/fourth" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4539, -3.93873, 165.351 )
+unique_id = 9
+
+[node name="third" type="Spatial" parent="coins"]
+visible = false
+script = SubResource( 7 )
+coin_id = 7
+
+[node name="Collectible3" parent="coins/third" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -253.819, -3.60299, -113.201 )
+unique_id = 8
+
+[node name="second" type="Spatial" parent="coins"]
+visible = false
+script = SubResource( 8 )
+coin_id = 6
+
+[node name="Collectible4" parent="coins/second" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -325.396, -3.60299, 311.187 )
+unique_id = 7
+
+[node name="first" type="Spatial" parent="coins"]
+
+[node name="Collectible5" parent="coins/first" instance=ExtResource( 2 )]
+transform = Transform( 0.0234725, 0, 0.999725, 0, 1, 0, -0.999725, 0, 0.0234725, -423.791, -3.60299, 105.691 )
+unique_id = 6
+
+[node name="last coin" type="Spatial" parent="coins"]
+visible = false
+script = SubResource( 17 )
+coin_id = 9
+
+[node name="Collectible" parent="coins/last coin" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -93.4902, -2.52355, -142.545 )
+unique_id = 10
+
+[connection signal="ready" from="." to="player" method="_on_TestLevel_ready"]
