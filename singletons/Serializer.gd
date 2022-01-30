@@ -35,6 +35,7 @@ func get(key):
 # in the format [name, value]
 var defaults = [["fov", 70], ["sensitivity", 0.1], ["coins", 0], ["coin_ids", []], ["time", 0]]
 func _ready():
+	randomize()
 	if(load_on_ready):
 		load_from_file()
 	for i in defaults:
