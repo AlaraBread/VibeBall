@@ -474,13 +474,14 @@ material_override = ExtResource( 6 )
 use_collision = true
 
 [node name="StaticBody" type="StaticBody" parent="maze/MazeP1"]
-transform = Transform( -6.36263e-07, 0, -1.548, 0, 0.78, 0, 14.556, 0, -6.76652e-08, -84.716, -5.971, -117.764 )
+transform = Transform( -6.36263e-07, 0, -1.548, 0, 0.78, 0, 14.556, 0, -6.76652e-08, -94.1238, -7.51494, -127.228 )
 script = SubResource( 11 )
 direction = Vector3( 0, 0, 1 )
-distance = 20.0
+distance = 45.0
+speed = 3.5
 
 [node name="CollisionShape" type="CollisionShape" parent="maze/MazeP1/StaticBody"]
-transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, -4.26326e-14, 0, 1, 2.2713, 1.98827, -8.40435 )
+transform = Transform( 1, 0, -3.55271e-15, 0, 1, 0, 2.84217e-14, 0, 1, 0.801502, 1.98827, -8.40434 )
 shape = SubResource( 12 )
 
 [node name="PathPiece045" type="CSGBox" parent="maze/MazeP1/StaticBody/CollisionShape"]
@@ -1393,7 +1394,7 @@ depth = 160.0
 material = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4928, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -86.114, 0, -134.748 )
 mass = 0.69
 
 [node name="DieBox" parent="." instance=ExtResource( 8 )]
