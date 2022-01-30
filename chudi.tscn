@@ -1,11 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://edittedcoralreef.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Sky.tscn" type="PackedScene" id=2]
 [ext_resource path="res://models/ringogltf.gltf" type="PackedScene" id=3]
-[ext_resource path="res://assets/SimpleSky.tscn" type="PackedScene" id=4]
+[ext_resource path="res://building1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/Level.gd" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=1]
+params_diffuse_mode = 4
+albedo_color = Color( 0.372549, 0.372549, 0.372549, 1 )
+metallic = 1.0
+metallic_specular = 0.3
+roughness = 0.45
 
 [node name="Spatial" type="Spatial"]
+script = ExtResource( 6 )
 
 [node name="Spatial3" type="Spatial" parent="."]
 
@@ -13,39 +23,432 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39468, 62.5481, 1.04131 )
 
 [node name="ringogltf2" parent="Spatial3" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111.481, 62.5481, 1.04131 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -111.481, 62.5481, -81.0068 )
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56.1168, 0 )
 
-[node name="Terrain" type="Spatial" parent="."]
+[node name="Big Terrain" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488148, 46.0947, 0.0482941 )
 
-[node name="coralreef" parent="Terrain" instance=ExtResource( 1 )]
+[node name="Terrain" type="Spatial" parent="Big Terrain"]
+
+[node name="coralreef" parent="Big Terrain/Terrain" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
 
-[node name="coralreef2" parent="Terrain" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+[node name="coralreef2" parent="Big Terrain/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.956596, 1.38586, 17.7515 )
 
-[node name="coralreef3" parent="Terrain" instance=ExtResource( 1 )]
+[node name="coralreef3" parent="Big Terrain/Terrain" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
 
-[node name="coralreef4" parent="Terrain" instance=ExtResource( 1 )]
+[node name="coralreef4" parent="Big Terrain/Terrain" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
 
-[node name="Terrain2" type="Spatial" parent="."]
+[node name="Big Terrain2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.051, 46.0947, 0.0482941 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain2"]
+
+[node name="coralreef" parent="Big Terrain2/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef5" parent="Big Terrain2/Terrain" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -79.7063, 0.833248, 44.5505 )
+
+[node name="coralreef2" parent="Big Terrain2/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain2/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain2/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.051, 46.0947, -53.6085 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain3"]
+
+[node name="coralreef" parent="Big Terrain3/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Big Terrain3/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 6, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain3/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain3/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.051, 46.0947, -108.659 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain4"]
+
+[node name="coralreef" parent="Big Terrain4/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Big Terrain4/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain4/Terrain" instance=ExtResource( 1 )]
+transform = Transform( -0.99804, 0, 0.0625815, 0, 2.5, 0, -0.0625815, 0, -0.99804, -78.859, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain4/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 427.058, 46.0947, 0.0482941 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain5"]
+
+[node name="coralreef" parent="Big Terrain5/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Big Terrain5/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.956596, 1.38586, 17.7515 )
+
+[node name="coralreef3" parent="Big Terrain5/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain5/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 551.621, 46.0947, 0.0482941 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain6"]
+
+[node name="coralreef" parent="Big Terrain6/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef5" parent="Big Terrain6/Terrain" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -79.7063, 0.833248, 44.5505 )
+
+[node name="coralreef2" parent="Big Terrain6/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain6/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain6/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 551.621, 46.0947, -53.6085 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain7"]
+
+[node name="coralreef" parent="Big Terrain7/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Big Terrain7/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 6, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain7/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain7/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Big Terrain8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 551.621, 46.0947, -108.659 )
+
+[node name="Terrain" type="Spatial" parent="Big Terrain8"]
+
+[node name="coralreef" parent="Big Terrain8/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Big Terrain8/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 3, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Big Terrain8/Terrain" instance=ExtResource( 1 )]
+transform = Transform( -0.99804, 0, 0.0625815, 0, 2.5, 0, -0.0625815, 0, -0.99804, -78.859, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Big Terrain8/Terrain" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Terrain3" type="Spatial" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -77.4124, 46.0947, 66.0419 )
+
+[node name="coralreef" parent="Terrain3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Terrain3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, 1.08588, 7.45097, 19.299 )
+
+[node name="coralreef3" parent="Terrain3" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 5, 0, 1.50996e-07, 0, -1, -197.317, 8.80155, 17.9614 )
+
+[node name="coralreef4" parent="Terrain3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 4, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="coralreef5" parent="Terrain3" instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -1.50996e-07, 0, 1.5, 0, 1.50996e-07, 0, -1, -76.7953, 1.27514, 19.5583 )
+
+[node name="Terrain4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.488148, 46.0947, -112.152 )
+
+[node name="coralreef" parent="Terrain4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Terrain4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Terrain4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Terrain4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Terrain5" type="Spatial" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -77.4124, 46.0947, -46.1583 )
+
+[node name="coralreef" parent="Terrain5" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="Terrain5" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="Terrain5" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="Terrain5" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="DARK MODE" type="Spatial" parent="."]
 transform = Transform( -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 0, 0, 2, -206.925, -9.5422, -0.193787 )
 
-[node name="coralreef" parent="Terrain2" instance=ExtResource( 1 )]
+[node name="coralreef" parent="DARK MODE" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
 
-[node name="coralreef2" parent="Terrain2" instance=ExtResource( 1 )]
+[node name="coralreef2" parent="DARK MODE" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
 
-[node name="coralreef3" parent="Terrain2" instance=ExtResource( 1 )]
+[node name="coralreef3" parent="DARK MODE" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
 
-[node name="coralreef4" parent="Terrain2" instance=ExtResource( 1 )]
+[node name="coralreef4" parent="DARK MODE" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
 
-[node name="SimpleSky" parent="." instance=ExtResource( 4 )]
+[node name="DARK MODE2" type="Spatial" parent="."]
+transform = Transform( -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 0, 0, 2, -206.925, -9.5422, -112.354 )
+
+[node name="coralreef" parent="DARK MODE2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="DARK MODE2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="DARK MODE2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="DARK MODE2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="DARK MODE3" type="Spatial" parent="."]
+transform = Transform( -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 0, 0, 2, -206.925, -9.5422, -230.281 )
+
+[node name="coralreef" parent="DARK MODE3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="DARK MODE3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="DARK MODE3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="DARK MODE3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="DARK MODE4" type="Spatial" parent="."]
+transform = Transform( -5, 7.54979e-07, 0, -7.54979e-07, -5, 0, 0, 0, 2, -206.925, -9.5422, -342.441 )
+
+[node name="coralreef" parent="DARK MODE4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, -7.03628 )
+
+[node name="coralreef2" parent="DARK MODE4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.989746, 1.27514, 17.9614 )
+
+[node name="coralreef3" parent="DARK MODE4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, 17.9614 )
+
+[node name="coralreef4" parent="DARK MODE4" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.506, 1.27514, -9.62392 )
+
+[node name="Rampoid" type="Spatial" parent="."]
+transform = Transform( -0.0126278, 1.10396e-09, 0.499002, -1.74846e-08, -0.2, 0, 0.199601, -1.74497e-08, 0.0315695, 236.709, 72.213, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 0, 7.45058e-08, 0, 2, 0, -7.45058e-08, 0, 2, 0, 0, 0 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 1.11759e-08, 1.11759e-07, 0, 1.93185, -0.517638, -7.45058e-08, 0.517638, 1.93185, 7.62939e-06, 8, -60 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox6" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, -1.11759e-08, 1.11759e-07, 0, 1.93185, 0.517638, -7.45058e-08, -0.517638, 1.93185, 2.09808e-05, 8, 60 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 3.72529e-08, 5.21541e-08, 0, 1.73205, -1, -7.45058e-08, 1, 1.73205, -1.33514e-05, 24, -98 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox7" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, -3.72529e-08, 5.21541e-08, 0, 1.73205, 1, -7.45058e-08, -1, 1.73205, 1.33514e-05, 24, 98 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox4" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 5.21541e-08, 5.21541e-08, 0, 1.41421, -1.41421, -7.45058e-08, 1.41421, 1.41421, -1.90735e-05, 38, -126 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox8" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, -5.21541e-08, 5.21541e-08, 0, 1.41421, 1.41421, -7.45058e-08, -1.41421, 1.41421, 3.8147e-06, 38, 126 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox5" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 5.21541e-08, 3.72529e-08, 0, 1, -1.73205, -7.45058e-08, 1.73205, 1, -3.8147e-06, 64, -152 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox9" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, -5.21541e-08, 3.72529e-08, 0, 1, 1.73205, -7.45058e-08, -1.73205, 1, 1.90735e-05, 64, 152 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox10" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, -1.19209e-07, 1.49012e-08, 0, 0.517638, 1.93185, -7.45058e-08, -1.93185, 0.517638, 0, 118, 176 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox11" type="CSGBox" parent="Rampoid"]
+transform = Transform( 2, 7.45058e-08, 1.11759e-08, 0, 0.517638, -1.93185, -7.45058e-08, 1.93185, 0.517638, 0, 118, -176 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="Rampoid2" type="Spatial" parent="."]
+transform = Transform( 0.0126278, 0, 0.499002, 0, 0.2, 0, -0.199601, 0, 0.0315695, -185.921, 12.7743, -80.7257 )
+
+[node name="CSGBox" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 0, 7.45058e-08, 0, 2, 0, -7.45058e-08, 0, 2, 0, 0, 0 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 1.11759e-08, 1.11759e-07, 0, 1.93185, -0.517638, -7.45058e-08, 0.517638, 1.93185, 7.62939e-06, 8, -60 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox6" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, -1.11759e-08, 1.11759e-07, 0, 1.93185, 0.517638, -7.45058e-08, -0.517638, 1.93185, 2.09808e-05, 8, 60 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox3" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 3.72529e-08, 5.21541e-08, 0, 1.73205, -1, -7.45058e-08, 1, 1.73205, -1.33514e-05, 24, -98 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox7" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, -3.72529e-08, 5.21541e-08, 0, 1.73205, 1, -7.45058e-08, -1, 1.73205, 1.33514e-05, 24, 98 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox4" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 5.21541e-08, 5.21541e-08, 0, 1.41421, -1.41421, -7.45058e-08, 1.41421, 1.41421, -1.90735e-05, 38, -126 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox8" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, -5.21541e-08, 5.21541e-08, 0, 1.41421, 1.41421, -7.45058e-08, -1.41421, 1.41421, 3.8147e-06, 38, 126 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox5" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 5.21541e-08, 3.72529e-08, 0, 1, -1.73205, -7.45058e-08, 1.73205, 1, -3.8147e-06, 64, -152 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox9" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, -5.21541e-08, 3.72529e-08, 0, 1, 1.73205, -7.45058e-08, -1.73205, 1, 1.90735e-05, 64, 152 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox10" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, -7.45058e-08, 1.11759e-08, 0, 0.517638, 1.93185, -7.45058e-08, -1.93185, 0.517638, 3.8147e-06, 118, 176 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="CSGBox11" type="CSGBox" parent="Rampoid2"]
+transform = Transform( 2, 7.45058e-08, 1.11759e-08, 0, 0.517638, -1.93185, -7.45058e-08, 1.93185, 0.517638, 0, 118, -176 )
+use_collision = true
+width = 54.0
+depth = 46.0
+material = SubResource( 1 )
+
+[node name="Sky" parent="." instance=ExtResource( 2 )]
+color_sky = Color( 0.756863, 0.780392, 0.843137, 1 )
+sky_tone = 1.8683
+sky_density = 0.0
+day_light = Color( 0.576471, 0.345098, 0.345098, 1 )
+clouds_tint = Color( 0.576471, 0.345098, 0.345098, 1 )
+sun_radius = 0.0
+moon_radius = 0.2314
+moon_phase = -0.6991
+wind_strength = 0.4419
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="building1" parent="Spatial" instance=ExtResource( 4 )]
