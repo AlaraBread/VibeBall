@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=14 format=2]
+[gd_resource type="Theme" load_steps=15 format=2]
 
 [ext_resource path="res://assets/theme/SupermercadoOne-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -65,6 +65,8 @@ font_data = ExtResource( 1 )
 size = 64
 font_data = ExtResource( 1 )
 
+[sub_resource type="ImageTexture" id=15]
+
 [sub_resource type="StyleBoxFlat" id=13]
 content_margin_left = 30.0
 content_margin_right = 30.0
@@ -126,10 +128,10 @@ Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 8 )
 Fonts/fonts/large = SubResource( 2 )
 Fonts/fonts/normal = SubResource( 3 )
-HSlider/icons/grabber = null
-HSlider/icons/grabber_disabled = null
-HSlider/icons/grabber_highlight = null
-HSlider/icons/tick = null
+HSlider/icons/grabber = SubResource( 15 )
+HSlider/icons/grabber_disabled = SubResource( 15 )
+HSlider/icons/grabber_highlight = SubResource( 15 )
+HSlider/icons/tick = SubResource( 15 )
 HSlider/styles/grabber_area = SubResource( 13 )
 HSlider/styles/grabber_area_highlight = SubResource( 14 )
 HSlider/styles/slider = SubResource( 10 )

@@ -6,6 +6,8 @@ export(String) var scene_switch_to = ""
 func _ready():
 	var coin_ids = Serializer.get("coin_ids")
 	if(unique_id in coin_ids):
+		if(scene_switch_to != ""):
+			get_tree().change_scene(scene_switch_to)
 		queue_free()
 
 func _on_Collectible_body_entered(body):
